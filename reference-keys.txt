@@ -1,8 +1,8 @@
-preface
 intro
-about-bookdown
-r-markdown
+graph-representation-learning
+cell-profiling
+why-graph-representation-learning
 methods
-about-bookdown-1
+about-bookdown
 results
-about-bookdown-2
+about-bookdown-1
