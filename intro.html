@@ -153,14 +153,26 @@ div.csl-indent {
 <p>Aside from these units and descriptors, there are often hierarchical modules in the complex graphs. For instance, a subset of nodes that are connected to each other in a specific wiring diagram is called a subgraph and those subgraphs that occur more frequently in the graph are called motifs. Motifs and subgraphs can be used to define a highly interconnected group of nodes with relatively distinct functions or behaviour which seems to be a property of all complex networks<span class="citation">(<a href="#ref-Stamile2021Jun" role="doc-biblioref">Stamile, Marzullo, and Deusebio 2021</a>)</span>.</p>
 <p>Network architectures also can be categorized into various models, such as scale-free, random, and hierarchical networks. Scale-free networks are highly non-uniform, with a small number of nodes having many links and most nodes having few links. These networks exhibit a power-law degree distribution, with a degree exponent γ. Hierarchical networks, on the other hand, are characterized by their modularity, local clustering, and scale-free topology, and can be described by iterative clustering. Random networks are more uniform, with links placed randomly and a Poisson degree distribution.</p>
 <p>The widely-used machine-learning approach for graphs is representation learning. There are several types of graphs that can be used for representation learning. Graphs can be simple, weighted, multi-modal, knowledge-based, multi-layer or temporal. Nodes and edges can also be spatial elements of a multi-dimensional space e.g., a spatial representation of cell interactions in euclidean space or a 3D point cloud of the molecule’s atomic coordinates. All in all, the aim of ML is to realize the essence of graphs. The first step usually is to transform nodes and edges to a lower vectorial space which is called embedding. After embedding the complex structure of the graph into lower space, different types of machine-learning techniques can be performed on the data<span class="citation">(<a href="#ref-zhang2018network" role="doc-biblioref">Zhang et al. 2018</a>)</span>.</p>
+<div style="text-align: center;">
+<figure>
+<iframe src="assets/network-basics.html" width="95%" height="550px" alt="Graph basics" id="graph-basics2">
+</iframe>
+<figcaption>
+<em>Summary on network basics</em>
+</figcaption>
+</figure>
+</div>
 <p>Complex networks exhibit several interesting features, such as the small-world effect, disassortativity, and hierarchical modularity. The small-world effect implies that any two nodes can be connected with a path of only a few links. Disassortativity refers to the tendency of highly connected nodes (hubs) to avoid linking directly to each other, while nodes of low degree are more likely to connect with nodes of high degree. Hierarchical modularity is evident in the presence of motifs (subgraphs occurring more frequently in the network), motif clusters, and modules (clusters of highly interconnected nodes with distinct functions or behaviors).</p>
 <p>Graph representation learning has become a leading machine learning approach for networks, allowing for the principles of networks to be realized in a compact vectorial space, or embeddings. This technique involves specifying nonlinear transformation functions that map nodes to points in the embedding space. Various types of graphs can be used for representation learning, including simple, weighted, attributed, multimodal, heterogeneous, knowledge graphs, multi-layer graphs, temporal graphs, and spatial graphs. These graph types can be combined to create new objects, such as multi-layer spatial or multimodal temporal graphs.</p>
 <p>In conclusion, network science and graph representation learning have become increasingly important tools for studying complex systems. By leveraging the power of these techniques, researchers can gain new insights into the structure and dynamics of complex networks in various fields, leading to a deeper understanding of the world around us.</p>
 </div>
 <div id="cell-profiling" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Cell profiling<a href="intro.html#cell-profiling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Image-based cell profiling is a high-throughput and relatively cheap method to quantify the phenotype features of a cell line. This is particularly important in distinguishing the healthy and diseased states of the cell. Studies showed the great capability of this method in disease recognition or looking for many treatments effect within a single day. The output of this high-throughput microscopy is images which by itself can be an excellent source of unbiased information for analysis. There have been numerous studies that used deep learning on these images and resulted in models with unmatched power for identifying disease-specific phenotypes in clinical diagnostics and chemical lead hopping in drug discovery and so on. Additionally, specific phenotype features of any perturbation can be extracted to be used for data mining and profile analysis<span class="citation">(<a href="#ref-rietdijk2022morphological" role="doc-biblioref">Rietdijk et al. 2022</a>)</span>.</p>
-<p>Alongside genetic alteration, chemical perturbation in cellular profiling also presented itself as a promising high throughput screening method that can potentially pave the</p>
+<p>Cell painting and cell profiling are advanced high-content imaging and analysis techniques used in cell biology to comprehensively characterize cellular phenotypes. These methods combine high-throughput microscopy with computational analysis to simultaneously investigate multiple cellular features, enabling the study of complex biological systems and the discovery of novel drug targets or biomarkers. his is particularly important in distinguishing the healthy and diseased states of the cell. Studies showed the great capability of this method in disease recognition or looking for many treatments effect within a single day. The output of this high-throughput microscopy is images which by itself can be an excellent source of unbiased information for analysis. There have been numerous studies that used deep learning on these images and resulted in models with unmatched power for identifying disease-specific phenotypes in clinical diagnostics and chemical lead hopping in drug discovery and so on. Additionally, specific phenotype features of any perturbation can be extracted to be used for data mining and profile analysis<span class="citation">(<a href="#ref-rietdijk2022morphological" role="doc-biblioref">Rietdijk et al. 2022</a>)</span>.</p>
+<p>With cell painting, different type of dyes are used to stain cells and target specific subcellular compartments or structures. By multiplexing several cellular features, including organelles, cytoskeletons, and nuclear compartments, several cellular features can be visualized simultaneously. By imaging stained cells with high-throughput microscopy, numerous morphological, textural, and intensity-based features are captured, resulting in a wealth of quantitative data. Subsequently, cell profiling is employed to analyze the acquired images. This process leverages computational algorithms, such as machine learning and deep learning, to extract quantitative information from the images. The resulting high-dimensional data, often referred to as “features” or “phenotypic fingerprints”, is used to classify cells, identify functional relationships, or reveal previously unrecognized patterns.</p>
+<p>These methods have been used to address various biological questions. Bray et al. (2016), for example, utilized these techniques to create a morphological map of human cells exposed to a variety of bioactive compounds. The results of their research have led to the identification of novel compound-target interactions, demonstrated the potential of cell painting as a tool for high-throughput drug discovery, and provided a comprehensive resource for the scientific community. In addition, cell painting and cell profiling have allowed scientists to dissect signaling pathways, elucidate gene function, and understand disease mechanisms. Aside from uncovering novel gene functions and dissecting cellular networks, researchers have used these methods to study how genetic or chemical perturbations affect cell phenotypes.</p>
+<p>Drug discovery, precision medicine, and basic research can all benefit from cell painting and cell profiling. In addition to revealing novel drug targets, these techniques can also identify potential therapeutic compounds and elucidate the mechanisms underlying disease pathology by providing a comprehensive, systems-level view of cellular phenotypes. The high-throughput nature of these methods also allows rapid screening of vast compound libraries or genetic perturbations, which accelerates scientific discovery and facilitates the development of personalized therapeutics.</p>
+<p>Our understanding of cellular biology has been greatly enriched by the use of cell painting and cell profiling, powerful, high-content imaging and analysis techniques. These methods have aided in the discovery of new drugs, precision medicine, and basic research by offering a comprehensive view of cellular phenotypes, and they remain an essential tool in modern cell biology.</p>
 </div>
 <div id="why-graph-representation-learning" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Why graph representation learning?<a href="intro.html#why-graph-representation-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -223,10 +235,7 @@ gitbook.start({
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": null,
-"text": null
-},
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -235,13 +244,16 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf", "_main.epub", "_main.mobi"],
 "search": {
 "engine": "fuse",
 "options": null
 },
 "toc": {
 "collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
 }
 });
 });
