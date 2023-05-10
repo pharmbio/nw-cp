@@ -23,7 +23,7 @@
 <meta name="author" content="Nima Chamyani" />
 
 
-<meta name="date" content="2023-05-02" />
+<meta name="date" content="2023-05-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -98,17 +162,29 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#graph-representation-learning"><i class="fa fa-check"></i><b>1.1</b> Graph representation learning</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#cell-profiling"><i class="fa fa-check"></i><b>1.2</b> Cell profiling</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#why-graph-representation-learning"><i class="fa fa-check"></i><b>1.3</b> Why graph representation learning?</a></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#graphs"><i class="fa fa-check"></i><b>1.1</b> Graphs</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#graph-representation-learning"><i class="fa fa-check"></i><b>1.2</b> Graph representation learning</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#cell-profiling"><i class="fa fa-check"></i><b>1.3</b> Cell profiling</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#why-graph-representation-learning"><i class="fa fa-check"></i><b>1.4</b> Why graph representation learning?</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods and materials</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#about-bookdown"><i class="fa fa-check"></i><b>2.1</b> About Bookdown</a></li>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#data-acquisition-softwares-and-libraries"><i class="fa fa-check"></i><b>2.1</b> Data acquisition, softwares and libraries</a></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#data-preprocessing"><i class="fa fa-check"></i><b>2.2</b> Data Preprocessing</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#covid-19-dataset"><i class="fa fa-check"></i><b>2.2.1</b> COVID-19 Dataset</a>
+<ul>
+<li class="chapter" data-level="2.2.1.1" data-path="methods.html"><a href="methods.html#normalization"><i class="fa fa-check"></i><b>2.2.1.1</b> Normalization</a></li>
+<li class="chapter" data-level="2.2.1.2" data-path="methods.html"><a href="methods.html#dimensionality-reductin"><i class="fa fa-check"></i><b>2.2.1.2</b> Dimensionality Reductin</a></li>
+<li class="chapter" data-level="2.2.1.3" data-path="methods.html"><a href="methods.html#development-of-a-binary-classification-of-data"><i class="fa fa-check"></i><b>2.2.1.3</b> Development of a binary classification of data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#featurizing-compounds"><i class="fa fa-check"></i><b>2.2.2</b> Featurizing compounds</a></li>
+<li class="chapter" data-level="2.2.3" data-path="methods.html"><a href="methods.html#building-covid-19-bio-graph"><i class="fa fa-check"></i><b>2.2.3</b> Building COVID-19 Bio-Graph</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#about-bookdown-1"><i class="fa fa-check"></i><b>3.1</b> About Bookdown</a></li>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#about-bookdown"><i class="fa fa-check"></i><b>3.1</b> About Bookdown</a></li>
 </ul></li>
 </ul>
 
@@ -129,11 +205,475 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="methods" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Methods and materials<a href="methods.html#methods" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This is a sample book written using <strong>Bookdown</strong>. In this book, we’ll explore the power of combining R Markdown with Bookdown to create a beautifully formatted online book.</p>
-<div id="about-bookdown" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> About Bookdown<a href="methods.html#about-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Bookdown is an R package that allows you to write books, articles, and reports in R Markdown. It supports multiple output formats, including HTML, PDF, and EPUB.</p>
+<p>A diverse set of computational tools and methodologies were employed in this study to analyze and interpret complex biomedical data.</p>
+<div id="data-acquisition-softwares-and-libraries" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Data acquisition, softwares and libraries<a href="methods.html#data-acquisition-softwares-and-libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data used in this study consists of complex biomedical data, encompassing information related to more than 5000 chemical compounds, their related cellular phenotypes in infected cells with COVID-19, and various biological entities like proteins and pathways in humans. High-dimensional cell profiling data was collected from the Pharmaceutical Bioinformatics Research Group at Uppsala University. The data encompassed various cellular phenotypes under chemical perturbations. The data was then preprocessed and normalized to ensure uniformity and mitigate the effects of batch variations and other noise. Additionally, chemical compound information, including molecular structure and other biological entities like proteins and biological pathways, was collected from several relevant databases.</p>
+<p>Initial data preprocessing was performed using the <code>polars</code> and <code>pandas</code> Python packages for data manipulation. Any inconsistencies, outliers, and missing values were identified and handled appropriately to ensure data integrity.</p>
+<p>The main analytical technique used in this study is graph representation learning. The analysis was predominantly performed in Python (version 3.8), with a variety of libraries. PyTorch (version 1.13.1+cu116), a deep learning framework that allows for flexible and efficient model building and training, was used. For the implementation of graph neural networks (GNNs), both PyTorch Geometric (version 2.2.0) and Deep Graph Library (DGL, version 1.0.1+cu116) were utilized. These libraries are extensions of PyTorch designed specifically for graph representation learning, supporting a variety of GNN models and providing efficient and scalable implementations.</p>
+<p>DeepChem (version 2.7.1) was utilized for pre-processing and some featurization of chemical compounds. Physico-chemical featurization were performed by RDKit and Mordred library. TorchDrug (version 0.2.0.post1), an emerging toolkit for drug discovery, was used to create network architectures for drug generation tasks.</p>
+<p>Chemoinformatics operations, such as converting chemical structures to molecular graphs, were carried out using RDKit (version 2022.09.5). The Scikit-learn library was employed for general machine learning tasks, including model evaluation and hyperparameter tuning.</p>
+<p>For the visualization of the data and results, Plotly, a graphing library that enables the creation of interactive and high-quality visualizations, was primarily used.</p>
+<p>All statistical analyses were performed using the Scikit-learn library in Python and some specific analyses were conducted in the R programming language. The analyses included standard measures of model performance, as well as more complex analyses like feature importance ranking.</p>
+<p>By employing this combination of methods and materials, the intersection of graph representation learning and cell profiling was explored, revealing novel insights into the interactions between chemical compounds, cellular phenotypes, and biological entities. This integrated approach facilitated the discovery of new relationships and potential drug targets that may not have been apparent through traditional analysis methods.</p>
+</div>
+<div id="data-preprocessing" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Data Preprocessing<a href="methods.html#data-preprocessing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="covid-19-dataset" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> COVID-19 Dataset<a href="methods.html#covid-19-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this data processing, the dataset containing phenotype features and metadata for multiple images was prepared for analysis. The dataset was cleaned by dropping possible empty features and features with the same value. All the numeric columns were extracted, and the phenotype features were identified and extracted from these columns. Features with low variability were removed, based on their standard deviation.</p>
+<p>In this data processing, the dataset containing phenotype features and metadata for multiple images was prepared for analysis. The dataset was cleaned by removing possible empty features and features with the same value. All the numerical columns were extracted, and the phenotype features were identified and extracted from these columns. Features with low variability were removed based on their standard deviation.</p>
+<p>This dataset represents an extensive collection of phenotype features extracted from images, along with associated metadata. Each row in the dataset corresponds to a single image, with each image associated with a specific site within a well. There are 9 sites (numbered 1-9) within each well, and approximately 350-360 wells within each plate, with a maximum of 384 wells per plate. The dataset encompasses 24 plates.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="6%" />
+<col width="14%" />
+<col width="4%" />
+<col width="2%" />
+<col width="2%" />
+<col width="3%" />
+<col width="12%" />
+<col width="5%" />
+<col width="4%" />
+<col width="5%" />
+<col width="2%" />
+<col width="6%" />
+<col width="5%" />
+<col width="6%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">ImageID</th>
+<th align="left">~ 2000 phenotype features</th>
+<th>PlateID</th>
+<th>Well</th>
+<th>Site</th>
+<th>Plate</th>
+<th>Plate_Well</th>
+<th>batch_id</th>
+<th>pertType</th>
+<th>cmpd_conc</th>
+<th>Flag</th>
+<th>Count_nuclei</th>
+<th>Batch nr</th>
+<th>Compound ID</th>
+<th>selected_mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">P03-L2_B03_1</td>
+<td align="left">……….. values ……….</td>
+<td>P03-L2</td>
+<td>B03</td>
+<td>1</td>
+<td>03-L2</td>
+<td>specs935-plate03-L2_B03</td>
+<td>BJ1894547</td>
+<td>trt</td>
+<td>10.0</td>
+<td>0</td>
+<td>109.0</td>
+<td>BJ1894547</td>
+<td>CBK042132</td>
+<td>estrogen receptor alpha modulator</td>
+</tr>
+<tr class="even">
+<td align="left">P03-L2_B03_2</td>
+<td align="left">……….. values ……….</td>
+<td>P03-L2</td>
+<td>B03</td>
+<td>2</td>
+<td>03-L2</td>
+<td>specs935-plate03-L2_B03</td>
+<td>BJ1894547</td>
+<td>trt</td>
+<td>10.0</td>
+<td>0</td>
+<td>121.0</td>
+<td>BJ1894547</td>
+<td>CBK042132</td>
+<td>estrogen receptor alpha modulator</td>
+</tr>
+</tbody>
+</table>
+<p>.
+.
+.
+|54366 rows, 2140 columns|</p>
+<p>During the preparation phase, the first step involved dropping empty features, i.e., columns with no values or with a standard deviation (SD) of 0. The dataset was then segregated into numeric columns, further filtered down to ‘phenotype features’ and ‘metadata’. The ‘phenotype features’ included numeric columns excluding those with certain strings such as ‘Metadata’, ‘Number’, ‘Outlier’, ‘ImageQuality’, ‘cmpd_conc’, ‘Total’, ‘Flag’ and ‘Site’. The difference between the number of numeric columns and the number of phenotype features gives the number of ‘metadata’.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="methods.html#cb1-1" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb1-2"><a href="methods.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> df.columns:</span>
+<span id="cb1-3"><a href="methods.html#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (df.dtypes[a]  <span class="st">&#39;float64&#39;</span>) <span class="op">|</span> (df.dtypes[a]  <span class="st">&#39;int64&#39;</span>) :</span>
+<span id="cb1-4"><a href="methods.html#cb1-4" aria-hidden="true" tabindex="-1"></a>        numeric_columns.append(a)</span>
+<span id="cb1-5"><a href="methods.html#cb1-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-6"><a href="methods.html#cb1-6" aria-hidden="true" tabindex="-1"></a>feature_columns <span class="op">=</span> [fc <span class="cf">for</span> fc <span class="kw">in</span> numeric_columns <span class="cf">if</span> (<span class="st">&#39;Metadata&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc) <span class="op">&amp;</span> (<span class="st">&#39;Number&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc) <span class="op">&amp;</span></span>
+<span id="cb1-7"><a href="methods.html#cb1-7" aria-hidden="true" tabindex="-1"></a>                   (<span class="st">&#39;Outlier&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc)  <span class="op">&amp;</span> (<span class="st">&#39;ImageQuality&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc)  <span class="op">&amp;</span> (<span class="st">&#39;cmpd_conc&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc)  <span class="op">&amp;</span></span>
+<span id="cb1-8"><a href="methods.html#cb1-8" aria-hidden="true" tabindex="-1"></a>                   (<span class="st">&#39;Total&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc) <span class="op">&amp;</span> (<span class="st">&#39;Flag&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc)  <span class="op">&amp;</span> (<span class="st">&#39;Site&#39;</span> <span class="kw">not</span> <span class="kw">in</span> fc) ]</span></code></pre></div>
+<p>The preparation phase also involved removing any features with missing values and those with an SD less than 0.0001.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="methods.html#cb2-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df.loc[:, feature_columns]</span>
+<span id="cb2-2"><a href="methods.html#cb2-2" aria-hidden="true" tabindex="-1"></a>X.dropna(axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-3"><a href="methods.html#cb2-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> X.loc[:, (X.std() <span class="op">&gt;</span> <span class="fl">0.0001</span>) ]</span></code></pre></div>
+<div id="normalization" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Normalization<a href="methods.html#normalization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In the normalization phase, the features were normalized based on DMSO (control), both in a general approach (without plate separation) and separated by plates. In the general approach, the median of all data points was taken at once, and the Z-scores were calculated using the median and median absolute deviations (MADs) for DMSO.</p>
+<p><span class="math display">\[Z = \frac{X - DMSO_{median}}{|X_{dmso} - DMSO_{median}|_{median}}\]</span></p>
+<p>where <span class="math inline">\(X\)</span> is observed feature value, <span class="math inline">\(DMSO_{median}\)</span> is median of DMSO and <span class="math inline">\(X_{dmso}\)</span> is observed feature value of DMSO.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="methods.html#cb3-1" aria-hidden="true" tabindex="-1"></a>dfDMSO <span class="op">=</span> df[df[<span class="st">&#39;batch_id&#39;</span>] <span class="op">==</span> <span class="st">&#39;[dmso]&#39;</span>]</span>
+<span id="cb3-2"><a href="methods.html#cb3-2" aria-hidden="true" tabindex="-1"></a>dfDMSO_Medians <span class="op">=</span> dfDMSO[phenotype_features].median()</span>
+<span id="cb3-3"><a href="methods.html#cb3-3" aria-hidden="true" tabindex="-1"></a>dfDMSO_MADs <span class="op">=</span> (dfDMSO[phenotype_features] <span class="op">-</span> dfDMSO[phenotype_features].median()).<span class="bu">abs</span>().median()</span>
+<span id="cb3-4"><a href="methods.html#cb3-4" aria-hidden="true" tabindex="-1"></a>df_Zscores <span class="op">=</span> df[phenotype_features].copy()</span>
+<span id="cb3-5"><a href="methods.html#cb3-5" aria-hidden="true" tabindex="-1"></a>df_Zscores <span class="op">=</span> (df[phenotype_features] <span class="op">-</span> dfDMSO_Medians[phenotype_features])<span class="op">/</span>dfDMSO_MADs[phenotype_features]</span>
+<span id="cb3-6"><a href="methods.html#cb3-6" aria-hidden="true" tabindex="-1"></a>df_Zscores.clip(lower<span class="op">=-</span><span class="dv">10</span>, upper<span class="op">=</span><span class="dv">10</span>,  inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<p>In the plate separated approach, the same process was applied. However, it was done first by finding local median values for DMSO in each plate and normalizing the measurements in the same plate based on their respective DMSO medians.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="methods.html#cb4-1" aria-hidden="true" tabindex="-1"></a>df_Zscores_by_plate <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb4-2"><a href="methods.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="methods.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> plate <span class="kw">in</span> plates:</span>
+<span id="cb4-4"><a href="methods.html#cb4-4" aria-hidden="true" tabindex="-1"></a>    plate_data <span class="op">=</span> df[df[<span class="st">&#39;Plate&#39;</span>] <span class="op">==</span> plate]</span>
+<span id="cb4-5"><a href="methods.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    df_DMSO <span class="op">=</span> plate_data[plate_data[<span class="st">&#39;batch_id&#39;</span>] <span class="op">==</span> <span class="st">&#39;[dmso]&#39;</span>]</span>
+<span id="cb4-6"><a href="methods.html#cb4-6" aria-hidden="true" tabindex="-1"></a>    df_DMSO_medians <span class="op">=</span> df_DMSO[phenotype_features].median()</span>
+<span id="cb4-7"><a href="methods.html#cb4-7" aria-hidden="true" tabindex="-1"></a>    df_DMSO_MADs <span class="op">=</span> (df_DMSO[phenotype_features] <span class="op">-</span> df_DMSO[phenotype_features].median()).<span class="bu">abs</span>().median()</span>
+<span id="cb4-8"><a href="methods.html#cb4-8" aria-hidden="true" tabindex="-1"></a>    Zscores <span class="op">=</span> (df[df[<span class="st">&#39;Plate&#39;</span>] <span class="op">==</span> plate][phenotype_features] <span class="op">-</span> df_DMSO_medians[phenotype_features])<span class="op">/</span>df_DMSO_MADs[phenotype_features]</span>
+<span id="cb4-9"><a href="methods.html#cb4-9" aria-hidden="true" tabindex="-1"></a>    df_Zscores_by_plate <span class="op">=</span> pd.concat([df_Zscores_by_plate, Zscores])</span>
+<span id="cb4-10"><a href="methods.html#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="methods.html#cb4-11" aria-hidden="true" tabindex="-1"></a>df_Zscores_by_plate</span></code></pre></div>
+</div>
+<div id="dimensionality-reductin" class="section level4 hasAnchor" number="2.2.1.2">
+<h4><span class="header-section-number">2.2.1.2</span> Dimensionality Reductin<a href="methods.html#dimensionality-reductin" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this part, several key steps were undertaken to reduce the dimensionality of the data, select the most informative features, and visualize the structure and variability of the data using Principal Component Analysis (PCA). PCA was applied to the dataset to identify the key direction or “a component” that describes most of the data variability. This process helps to transform the original dataset into an updated one where each data point is represented in terms of this component. The PCA algorithm also provides the loadings, or the contribution of each original feature to each principal component.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="methods.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pca <span class="im">import</span> pca</span>
+<span id="cb5-2"><a href="methods.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="methods.html#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="methods.html#cb5-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> covid_df.loc[(covid_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;DMSO&#39;</span>) <span class="op">|</span> (covid_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Uninfected&#39;</span>) <span class="op">|</span> (covid_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Remdesivir&#39;</span>)][features].values</span>
+<span id="cb5-5"><a href="methods.html#cb5-5" aria-hidden="true" tabindex="-1"></a>row_label <span class="op">=</span> covid_df.loc[(covid_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;DMSO&#39;</span>) <span class="op">|</span> (covid_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Uninfected&#39;</span>) <span class="op">|</span> (covid_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Remdesivir&#39;</span>)][<span class="st">&#39;label&#39;</span>]</span>
+<span id="cb5-6"><a href="methods.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="methods.html#cb5-7" aria-hidden="true" tabindex="-1"></a>PCA_model <span class="op">=</span> pca(n_components<span class="op">=</span><span class="dv">10</span>, detect_outliers<span class="op">=</span>[<span class="st">&#39;ht2&#39;</span>, <span class="st">&#39;spe&#39;</span>])</span>
+<span id="cb5-8"><a href="methods.html#cb5-8" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> PCA_model.fit_transform(X, col_labels<span class="op">=</span>features, row_labels<span class="op">=</span>row_label)</span>
+<span id="cb5-9"><a href="methods.html#cb5-9" aria-hidden="true" tabindex="-1"></a>PCA_model.plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span></code></pre></div>
+<div style="text-align: center;">
+<figure>
+<img src="assets/pca_1.png"
+         alt="Graph basics"
+         id="graph-basics"
+         style="width: 90%; height: auto;">
+</figure>
+</div>
+<p>Using outlier detection method like the Hotelling T2 test and the squared prediction error (SPE/DmodX) just one outlier were found in the data which was decided to remain in data.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="methods.html#cb6-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">17</span>,<span class="dv">8</span>))</span>
+<span id="cb6-2"><a href="methods.html#cb6-2" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> PCA_model.scatter(SPE<span class="op">=</span><span class="va">True</span>, hotellingt2<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">&#39;tab10&#39;</span>, ax<span class="op">=</span>axes[<span class="dv">0</span>])</span>
+<span id="cb6-3"><a href="methods.html#cb6-3" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> PCA_model.biplot(SPE<span class="op">=</span><span class="va">True</span>, hotellingt2<span class="op">=</span><span class="va">True</span>, fontdict<span class="op">=</span>{<span class="st">&#39;size&#39;</span>: <span class="dv">8</span>}, cmap<span class="op">=</span><span class="st">&#39;tab10&#39;</span>, PC<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>], ax<span class="op">=</span>axes[<span class="dv">1</span>])</span>
+<span id="cb6-4"><a href="methods.html#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div style="text-align: center;">
+<figure>
+<img src="assets/pca_biplot.png"
+         alt="Graph basics"
+         id="graph-basics"
+         style="width: 90%; height: auto;">
+</figure>
+</div>
+<p>The loading values obtained from PCA were subsequently utilized as input for a k-means clustering algorithm, enabling the clustering of features according to their loadings. The idea is to find the features that provide same information and cluster them together. The process begins with the execution of PCA, which is then followed by the deployment of k-means clustering on the PCA loadings. This arrangement allows features to be clustered based on their loadings. This can be construed as their significance or contribution to the data variance then a new feature is calculated for every cluster. This feature represents the average of all features contained within that specific cluster.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="methods.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> feature_reducer(df, feature_list, loading_dim<span class="op">=</span><span class="dv">32</span>, feat_output_dim<span class="op">=</span><span class="dv">32</span>):</span>
+<span id="cb7-2"><a href="methods.html#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-3"><a href="methods.html#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> sklearn <span class="im">import</span> preprocessing</span>
+<span id="cb7-4"><a href="methods.html#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb7-5"><a href="methods.html#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb7-6"><a href="methods.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="methods.html#cb7-7" aria-hidden="true" tabindex="-1"></a>    df_dsmo_uninfected_remi <span class="op">=</span> df.loc[(df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;DMSO&#39;</span>) <span class="op">|</span> (df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Uninfected&#39;</span>) <span class="op">|</span> (df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Remdesivir&#39;</span>)][feature_list]</span>
+<span id="cb7-8"><a href="methods.html#cb7-8" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> df_dsmo_uninfected_remi.values</span>
+<span id="cb7-9"><a href="methods.html#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="methods.html#cb7-10" aria-hidden="true" tabindex="-1"></a>    pca <span class="op">=</span> PCA()</span>
+<span id="cb7-11"><a href="methods.html#cb7-11" aria-hidden="true" tabindex="-1"></a>    pca.fit(X)</span>
+<span id="cb7-12"><a href="methods.html#cb7-12" aria-hidden="true" tabindex="-1"></a>    loadings <span class="op">=</span> pca.components_</span>
+<span id="cb7-13"><a href="methods.html#cb7-13" aria-hidden="true" tabindex="-1"></a>    loading_data <span class="op">=</span> pd.DataFrame(loadings[:loading_dim]).T.values</span>
+<span id="cb7-14"><a href="methods.html#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform k-means clustering</span></span>
+<span id="cb7-15"><a href="methods.html#cb7-15" aria-hidden="true" tabindex="-1"></a>    kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>feat_output_dim, random_state<span class="op">=</span><span class="dv">42</span>, n_init<span class="op">=</span><span class="dv">100</span>).fit(loading_data)</span>
+<span id="cb7-16"><a href="methods.html#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="methods.html#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get cluster assignments for each point</span></span>
+<span id="cb7-18"><a href="methods.html#cb7-18" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> kmeans.labels_</span>
+<span id="cb7-19"><a href="methods.html#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(feat_output_dim):</span>
+<span id="cb7-20"><a href="methods.html#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">exec</span>(<span class="ss">f&#39;f_</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">&#39;</span> <span class="op">+</span> <span class="ss">f&#39;= loading_data[labels == </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">]&#39;</span>)</span>
+<span id="cb7-21"><a href="methods.html#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="methods.html#cb7-22" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> pd.DataFrame({<span class="st">&#39;features&#39;</span> : df_dsmo_uninfected_remi.columns.values, <span class="st">&#39;cluster&#39;</span>: labels}).groupby(<span class="st">&quot;cluster&quot;</span>).agg(<span class="bu">list</span>)</span>
+<span id="cb7-23"><a href="methods.html#cb7-23" aria-hidden="true" tabindex="-1"></a>    column_list <span class="op">=</span> <span class="bu">list</span>(df.columns)</span>
+<span id="cb7-24"><a href="methods.html#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> feat <span class="kw">in</span> feature_list:</span>
+<span id="cb7-25"><a href="methods.html#cb7-25" aria-hidden="true" tabindex="-1"></a>        column_list.remove(feat)</span>
+<span id="cb7-26"><a href="methods.html#cb7-26" aria-hidden="true" tabindex="-1"></a>    new_df <span class="op">=</span> df.loc[:,column_list].copy()</span>
+<span id="cb7-27"><a href="methods.html#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># new_df = df.loc[:,list(set(df.columns) - set(feature_list))].copy()</span></span>
+<span id="cb7-28"><a href="methods.html#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, f_list <span class="kw">in</span> <span class="bu">enumerate</span>(f[<span class="st">&#39;features&#39;</span>]):</span>
+<span id="cb7-29"><a href="methods.html#cb7-29" aria-hidden="true" tabindex="-1"></a>        new_df[<span class="ss">f&#39;f</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">&#39;</span>] <span class="op">=</span> df[f_list].<span class="bu">apply</span>(<span class="kw">lambda</span> x:  x.mean() , axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-30"><a href="methods.html#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="methods.html#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_df, f</span></code></pre></div>
+<p>In another approach to reduce the dimension, each feature’s ability to differentiate between the classes was evaluated by calculating the area of the triangle formed by the centroids of the classes in the feature space when we just use that specific feature and one highly related parameter to differentiate classes (for instance feature vs. number of nuclei) to plot all the points. For this, the centroids of the three distinct categories (‘Compound’, ‘Uninfected’, ‘Remdesivir’) for each feature ~ number of nuclei plot have been calculated. The area of the triangle formed by these centroids and the distance between them has been computed. This quantifies the separation between the three categories using each feature and helps to find the most descriptive feature. Features resulting in larger triangle areas were considered more informative.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="methods.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb8-2"><a href="methods.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-3"><a href="methods.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="methods.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> area_of_triangle(p1, p2, p3):</span>
+<span id="cb8-5"><a href="methods.html#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the length of each side of the triangle</span></span>
+<span id="cb8-6"><a href="methods.html#cb8-6" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> math.sqrt((p2[<span class="dv">0</span>] <span class="op">-</span> p1[<span class="dv">0</span>])<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (p2[<span class="dv">1</span>] <span class="op">-</span> p1[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-7"><a href="methods.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> math.sqrt((p3[<span class="dv">0</span>] <span class="op">-</span> p2[<span class="dv">0</span>])<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (p3[<span class="dv">1</span>] <span class="op">-</span> p2[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-8"><a href="methods.html#cb8-8" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> math.sqrt((p3[<span class="dv">0</span>] <span class="op">-</span> p1[<span class="dv">0</span>])<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (p3[<span class="dv">1</span>] <span class="op">-</span> p1[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-9"><a href="methods.html#cb8-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-10"><a href="methods.html#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the semiperimeter of the triangle</span></span>
+<span id="cb8-11"><a href="methods.html#cb8-11" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> (a <span class="op">+</span> b <span class="op">+</span> c) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb8-12"><a href="methods.html#cb8-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-13"><a href="methods.html#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the area using Heron&#39;s formula</span></span>
+<span id="cb8-14"><a href="methods.html#cb8-14" aria-hidden="true" tabindex="-1"></a>    area <span class="op">=</span> math.sqrt(s <span class="op">*</span> (s <span class="op">-</span> a) <span class="op">*</span> (s <span class="op">-</span> b) <span class="op">*</span> (s <span class="op">-</span> c))</span>
+<span id="cb8-15"><a href="methods.html#cb8-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-16"><a href="methods.html#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> area</span>
+<span id="cb8-17"><a href="methods.html#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="methods.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distance_between_centroids(centroid1, centroid2):</span>
+<span id="cb8-19"><a href="methods.html#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the distance using the distance formula</span></span>
+<span id="cb8-20"><a href="methods.html#cb8-20" aria-hidden="true" tabindex="-1"></a>    distance <span class="op">=</span> np.sqrt((centroid2[<span class="dv">0</span>] <span class="op">-</span> centroid1[<span class="dv">0</span>])<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (centroid2[<span class="dv">1</span>] <span class="op">-</span> centroid1[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-21"><a href="methods.html#cb8-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-22"><a href="methods.html#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> distance</span>
+<span id="cb8-23"><a href="methods.html#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="methods.html#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="methods.html#cb8-25" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> preprocessing.StandardScaler(with_mean<span class="op">=</span><span class="va">True</span>, with_std<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-26"><a href="methods.html#cb8-26" aria-hidden="true" tabindex="-1"></a>scaled_df <span class="op">=</span> covid_df.copy()</span>
+<span id="cb8-27"><a href="methods.html#cb8-27" aria-hidden="true" tabindex="-1"></a>scaled_df.loc[:, features] <span class="op">=</span> scaler.fit_transform(scaled_df.loc[:, features])</span>
+<span id="cb8-28"><a href="methods.html#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="methods.html#cb8-29" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
+<span id="cb8-30"><a href="methods.html#cb8-30" aria-hidden="true" tabindex="-1"></a>comp_remi <span class="op">=</span> []</span>
+<span id="cb8-31"><a href="methods.html#cb8-31" aria-hidden="true" tabindex="-1"></a>comp_uni <span class="op">=</span> []</span>
+<span id="cb8-32"><a href="methods.html#cb8-32" aria-hidden="true" tabindex="-1"></a>remi_uni <span class="op">=</span> []</span>
+<span id="cb8-33"><a href="methods.html#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> feat <span class="kw">in</span> features[<span class="dv">1</span>:]:</span>
+<span id="cb8-34"><a href="methods.html#cb8-34" aria-hidden="true" tabindex="-1"></a>    compound_coords <span class="op">=</span> scaled_df.loc[scaled_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;compound&#39;</span>,[<span class="st">&#39;Count_nuclei&#39;</span>,feat]].values</span>
+<span id="cb8-35"><a href="methods.html#cb8-35" aria-hidden="true" tabindex="-1"></a>    uninfected_coords <span class="op">=</span> scaled_df.loc[scaled_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Uninfected&#39;</span>,[<span class="st">&#39;Count_nuclei&#39;</span>,feat]].values</span>
+<span id="cb8-36"><a href="methods.html#cb8-36" aria-hidden="true" tabindex="-1"></a>    remidesivir_coords <span class="op">=</span> scaled_df.loc[scaled_df[<span class="st">&#39;label&#39;</span>] <span class="op">==</span> <span class="st">&#39;Remdesivir&#39;</span>,[<span class="st">&#39;Count_nuclei&#39;</span>,feat]].values</span>
+<span id="cb8-37"><a href="methods.html#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="methods.html#cb8-38" aria-hidden="true" tabindex="-1"></a>    compound_centroid <span class="op">=</span> np.mean(compound_coords, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb8-39"><a href="methods.html#cb8-39" aria-hidden="true" tabindex="-1"></a>    uninfected_centroid <span class="op">=</span> np.mean(uninfected_coords, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb8-40"><a href="methods.html#cb8-40" aria-hidden="true" tabindex="-1"></a>    remidesivir_centroid <span class="op">=</span> np.mean(remidesivir_coords, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb8-41"><a href="methods.html#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-42"><a href="methods.html#cb8-42" aria-hidden="true" tabindex="-1"></a>    area <span class="op">=</span> area_of_triangle(compound_centroid, uninfected_centroid, remidesivir_centroid)</span>
+<span id="cb8-43"><a href="methods.html#cb8-43" aria-hidden="true" tabindex="-1"></a>    comp_remi_dist <span class="op">=</span>  distance_between_centroids(compound_centroid, remidesivir_centroid)</span>
+<span id="cb8-44"><a href="methods.html#cb8-44" aria-hidden="true" tabindex="-1"></a>    comp_uni_dist <span class="op">=</span>  distance_between_centroids(compound_centroid, uninfected_centroid)</span>
+<span id="cb8-45"><a href="methods.html#cb8-45" aria-hidden="true" tabindex="-1"></a>    remi_uni_dist <span class="op">=</span>  distance_between_centroids(remidesivir_centroid, uninfected_centroid)</span>
+<span id="cb8-46"><a href="methods.html#cb8-46" aria-hidden="true" tabindex="-1"></a>    scores.append(area)</span>
+<span id="cb8-47"><a href="methods.html#cb8-47" aria-hidden="true" tabindex="-1"></a>    comp_remi.append(comp_remi_dist)</span>
+<span id="cb8-48"><a href="methods.html#cb8-48" aria-hidden="true" tabindex="-1"></a>    comp_uni.append(comp_uni_dist)</span>
+<span id="cb8-49"><a href="methods.html#cb8-49" aria-hidden="true" tabindex="-1"></a>    remi_uni.append(remi_uni_dist)</span>
+<span id="cb8-50"><a href="methods.html#cb8-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-51"><a href="methods.html#cb8-51" aria-hidden="true" tabindex="-1"></a>feat_score <span class="op">=</span> pd.DataFrame({<span class="st">&#39;feat&#39;</span>: features[<span class="dv">1</span>:],</span>
+<span id="cb8-52"><a href="methods.html#cb8-52" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;score&#39;</span>: scores,</span>
+<span id="cb8-53"><a href="methods.html#cb8-53" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;comp_remi&#39;</span>:comp_remi,</span>
+<span id="cb8-54"><a href="methods.html#cb8-54" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;comp_uni&#39;</span>:comp_uni,</span>
+<span id="cb8-55"><a href="methods.html#cb8-55" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;remi_uni&#39;</span>: remi_uni})</span></code></pre></div>
+<p>The features have been ranked based on the calculated area, seen as a measure of separation between the categories. The top 50 features have been selected. Between the first 50 features all annotated with MITO were removed because they bias our model. Therefore, 16 features remain as our selected features.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="methods.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(feat_score.sort_values(by<span class="op">=</span>[<span class="st">&quot;score&quot;</span>], ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">50</span>)[<span class="st">&#39;feat&#39;</span>])</span></code></pre></div>
+<p>Finally, PCA has been performed again, this time exclusively on the selected features.</p>
+<div style="text-align: center;">
+<figure>
+<img src="assets/pca_16.png"
+         alt="Graph basics"
+         id="graph-basics"
+         style="width: 100%; height: auto;">
+</figure>
+</div>
+<p align="center">
+<a href="https://pharmbio.github.io/nw-cp/pca_16.html">Link to interactive Plot</a>
+</p>
+<p>The PCA results demonstrate that the 10 principal components can now explain a very high percentage (99.91%) of the variance. The first principle component improved from describing 75.1 percent of variance to 93.0 percent. This indicates that the selected features capture most of the data variability. The value of PC1 was used for regression models as the target value.</p>
+<div style="text-align: center;">
+<figure>
+<img src="assets/pca_2.png"
+         alt="Graph basics"
+         id="graph-basics"
+         style="width: 90%; height: auto;">
+</figure>
+</div>
+</div>
+<div id="development-of-a-binary-classification-of-data" class="section level4 hasAnchor" number="2.2.1.3">
+<h4><span class="header-section-number">2.2.1.3</span> Development of a binary classification of data<a href="methods.html#development-of-a-binary-classification-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this part, Kernel Density Estimation (KDE) and Empirical Confidence Regions (2d confidence intervals based on binned kernel density estimate) were utilized to inform the development of a binary classification model for identifying active and inactive compounds based on their PCA1 values.</p>
+<p>Firstly, a two-dimensional KDE was performed on the compounds’ PCA1 and PCA2 values. This KDE plot provided a comprehensive understanding of the distribution of data points in the PCA space. It highlighted two distinct clusters corresponding to active and inactive compounds.</p>
+<p>The KDE plot was further enhanced by overlaying empirical confidence regions on it. These regions were derived from the mean and covariance of the PCA1 and PCA2 values for each cluster. Two standard deviation ellipses were used, approximating 90% confidence regions for the location of the true mean of each cluster in the PCA space.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="methods.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a href="methods.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb10-3"><a href="methods.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-4"><a href="methods.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Ellipse</span>
+<span id="cb10-5"><a href="methods.html#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="methods.html#cb10-6" aria-hidden="true" tabindex="-1"></a>mean1 <span class="op">=</span> df_cluster1[[<span class="st">&#39;PC1&#39;</span>, <span class="st">&#39;PC2&#39;</span>]].mean()</span>
+<span id="cb10-7"><a href="methods.html#cb10-7" aria-hidden="true" tabindex="-1"></a>cov1 <span class="op">=</span> df_cluster1[[<span class="st">&#39;PC1&#39;</span>, <span class="st">&#39;PC2&#39;</span>]].cov()</span>
+<span id="cb10-8"><a href="methods.html#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="methods.html#cb10-9" aria-hidden="true" tabindex="-1"></a>mean2 <span class="op">=</span> df_cluster2[[<span class="st">&#39;PC1&#39;</span>, <span class="st">&#39;PC2&#39;</span>]].mean()</span>
+<span id="cb10-10"><a href="methods.html#cb10-10" aria-hidden="true" tabindex="-1"></a>cov2 <span class="op">=</span> df_cluster2[[<span class="st">&#39;PC1&#39;</span>, <span class="st">&#39;PC2&#39;</span>]].cov()</span>
+<span id="cb10-11"><a href="methods.html#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="methods.html#cb10-12" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">4</span>))</span>
+<span id="cb10-13"><a href="methods.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the KDE plot</span></span>
+<span id="cb10-14"><a href="methods.html#cb10-14" aria-hidden="true" tabindex="-1"></a>sns.kdeplot(data<span class="op">=</span>df_clust, x<span class="op">=</span><span class="st">&#39;PC1&#39;</span>, y<span class="op">=</span><span class="st">&#39;PC2&#39;</span>, fill<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb10-15"><a href="methods.html#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="methods.html#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the confidence ellipses</span></span>
+<span id="cb10-17"><a href="methods.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> mean, cov <span class="kw">in</span> [(mean1, cov1), (mean2, cov2)]:</span>
+<span id="cb10-18"><a href="methods.html#cb10-18" aria-hidden="true" tabindex="-1"></a>    eigenvalues, eigenvectors <span class="op">=</span> np.linalg.eigh(cov)</span>
+<span id="cb10-19"><a href="methods.html#cb10-19" aria-hidden="true" tabindex="-1"></a>    order <span class="op">=</span> eigenvalues.argsort()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb10-20"><a href="methods.html#cb10-20" aria-hidden="true" tabindex="-1"></a>    eigenvalues, eigenvectors <span class="op">=</span> eigenvalues[order], eigenvectors[:, order]</span>
+<span id="cb10-21"><a href="methods.html#cb10-21" aria-hidden="true" tabindex="-1"></a>    vx, vy <span class="op">=</span> eigenvectors[:,<span class="dv">0</span>]</span>
+<span id="cb10-22"><a href="methods.html#cb10-22" aria-hidden="true" tabindex="-1"></a>    theta <span class="op">=</span> np.arctan2(vy, vx)</span>
+<span id="cb10-23"><a href="methods.html#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="methods.html#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw a 2*2.146 ellipse for 90 % CI</span></span>
+<span id="cb10-25"><a href="methods.html#cb10-25" aria-hidden="true" tabindex="-1"></a>    ellipse <span class="op">=</span> Ellipse(xy<span class="op">=</span>mean, width<span class="op">=</span><span class="dv">2</span><span class="op">*</span><span class="fl">2.146</span><span class="op">**</span>np.sqrt(eigenvalues[<span class="dv">0</span>]), </span>
+<span id="cb10-26"><a href="methods.html#cb10-26" aria-hidden="true" tabindex="-1"></a>                      height<span class="op">=</span><span class="dv">2</span><span class="op">*</span><span class="fl">2.146</span><span class="op">**</span>np.sqrt(eigenvalues[<span class="dv">1</span>]), </span>
+<span id="cb10-27"><a href="methods.html#cb10-27" aria-hidden="true" tabindex="-1"></a>                      angle<span class="op">=</span>np.degrees(theta), edgecolor<span class="op">=</span><span class="st">&#39;red&#39;</span>, </span>
+<span id="cb10-28"><a href="methods.html#cb10-28" aria-hidden="true" tabindex="-1"></a>                      facecolor<span class="op">=</span><span class="st">&#39;none&#39;</span>)</span>
+<span id="cb10-29"><a href="methods.html#cb10-29" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(ellipse)</span>
+<span id="cb10-30"><a href="methods.html#cb10-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-31"><a href="methods.html#cb10-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div style="text-align: center;">
+<figure>
+<img src="assets/KDE_ECR.png"
+         alt="Graph basics"
+         id="graph-basics"
+         style="width: 70%; height: auto;">
+</figure>
+</div>
+<p>The intersection of these confidence regions was then examined. The PCA1 value of 5 at this intersection was hypothesized to be an effective threshold for binary classification of compounds. Any compound with a PCA1 value greater than this threshold was classified as ‘active’, and any compound with a PCA1 value less than this threshold was classified as ‘inactive’.</p>
+<p>Importantly, this approach allowed the study to estimate a suitable classification threshold but also to visualize the uncertainty around this threshold and the potential overlap between the two classes. The method provided a data-driven way to set the classification threshold and offered insights into the inherent complexity of the data.</p>
+<div style="text-align: center;">
+<figure>
+<img src="assets/ECIRegion_R.png"
+         alt="Graph basics"
+         id="graph-basics"
+         style="width: 80%; height: auto;">
+</figure>
+</div>
+<p>It should be noted that the assumptions of the Gaussian distribution and independent identically distributed data inherent to this method may not hold in all cases. Therefore, the results should be interpreted with caution. Further, the use of PCA1 values alone for classification may oversimplify the problem if the active and inactive compounds differ along other principal components as well. Therefore, additional analyses are recommended to validate and refine this binary classification model.</p>
+</div>
+</div>
+<div id="featurizing-compounds" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Featurizing compounds<a href="methods.html#featurizing-compounds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In machine learning, chemical featurization converts chemical compounds, which are three-dimensional entities, into a format that can be understood and processed by algorithms. Essentially, it involves converting the structure and properties of molecules into numerical vectors.</p>
+<p>It is necessary because machine learning algorithms work with numerical data rather than understanding chemical structures and properties directly. Featurization of the molecules is accomplished through the application of several molecular descriptors that efficiently capture the structural and property aspects of the compounds.</p>
+<p>Starting with MACCS fingerprints, these are binary representations of a molecule based on the presence or absence of 167 predefined structural fragments. MACCS fingerprints are popular due to their simplicity, interpretability, and effectiveness at capturing structural information.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="methods.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> deepchem <span class="im">as</span> dc</span>
+<span id="cb11-2"><a href="methods.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="methods.html#cb11-3" aria-hidden="true" tabindex="-1"></a>feat <span class="op">=</span> dc.feat.MACCSKeysFingerprint()</span>
+<span id="cb11-4"><a href="methods.html#cb11-4" aria-hidden="true" tabindex="-1"></a>maccs_fp <span class="op">=</span> feat.featurize(smiles)</span></code></pre></div>
+<p>Morgan fingerprints, also known as circular fingerprints, are another type of molecular descriptor. They are generated by iteratively hashing the environments of atoms in a molecule. These fingerprints are characterized by their flexibility, as their radius and length can be adjusted. This allows for various levels of specificity in the representation of molecular structures.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="methods.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> deepchem <span class="im">as</span> dc</span>
+<span id="cb12-2"><a href="methods.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="methods.html#cb12-3" aria-hidden="true" tabindex="-1"></a>feat <span class="op">=</span> dc.feat.CircularFingerprint(size<span class="op">=</span><span class="dv">2048</span>, radius<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb12-4"><a href="methods.html#cb12-4" aria-hidden="true" tabindex="-1"></a>morgan_fp <span class="op">=</span> feat.featurize(smiles)</span></code></pre></div>
+<p>PubChem fingerprints are binary fingerprints consisting of 881 bits, each representing a particular chemical substructure or pattern. They were specifically designed for use with the PubChem database and provide detailed chemical structure encoding.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="methods.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pubchempy <span class="im">as</span> pcp</span>
+<span id="cb13-2"><a href="methods.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="methods.html#cb13-3" aria-hidden="true" tabindex="-1"></a>cids <span class="op">=</span> <span class="bu">list</span>(df.pubchem_cid[df[<span class="st">&#39;label&#39;</span>]<span class="op">==</span><span class="st">&#39;compound&#39;</span>])</span>
+<span id="cb13-4"><a href="methods.html#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="methods.html#cb13-5" aria-hidden="true" tabindex="-1"></a>bit_list <span class="op">=</span> []</span>
+<span id="cb13-6"><a href="methods.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cid <span class="kw">in</span> tqdm(cids):</span>
+<span id="cb13-7"><a href="methods.html#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb13-8"><a href="methods.html#cb13-8" aria-hidden="true" tabindex="-1"></a>        pubchem_compound <span class="op">=</span>pcp.get_compounds(cid)[<span class="dv">0</span>]</span>
+<span id="cb13-9"><a href="methods.html#cb13-9" aria-hidden="true" tabindex="-1"></a>        pubchem_fp <span class="op">=</span> [<span class="bu">int</span>(bit) <span class="cf">for</span> bit <span class="kw">in</span> pubchem_compound.cactvs_fingerprint]</span>
+<span id="cb13-10"><a href="methods.html#cb13-10" aria-hidden="true" tabindex="-1"></a>        bit_list.append(pubchem_fp)</span>
+<span id="cb13-11"><a href="methods.html#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb13-12"><a href="methods.html#cb13-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&#39;No PubChem FP found for </span><span class="sc">{</span>cid<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb13-13"><a href="methods.html#cb13-13" aria-hidden="true" tabindex="-1"></a>        bit_list.append([])</span>
+<span id="cb13-14"><a href="methods.html#cb13-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-15"><a href="methods.html#cb13-15" aria-hidden="true" tabindex="-1"></a>pc_fp <span class="op">=</span> np.asarray(bit_list)</span></code></pre></div>
+<p>The Mol2Vec fingerprint is inspired by the Word2Vec algorithm in Natural Language Processing. It considers molecules as sentences and SMILES as words, thus converting molecules into continuous vectors. This technique captures not only the presence of particular substructures but also their context within the molecule, providing a more nuanced representation.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="methods.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> deepchem <span class="im">as</span> dc</span>
+<span id="cb14-2"><a href="methods.html#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="methods.html#cb14-3" aria-hidden="true" tabindex="-1"></a>feat <span class="op">=</span> dc.feat.Mol2VecFingerprint()</span>
+<span id="cb14-4"><a href="methods.html#cb14-4" aria-hidden="true" tabindex="-1"></a>m2v_fp <span class="op">=</span> feat.featurize(smiles)</span></code></pre></div>
+<p>In computational chemistry and drug discovery, molecules’ pre-treatment plays a crucial role in preparing them for machine learning applications. Molecules undergo optimization, where their 3D structure is refined and all possible conformations are explored. This step is vital as the 3D structure heavily influences various properties, such as reactivity and binding affinity. For Mordred and RDKit to compute all descriptors, we must optimize molecules and find their most energetically favorable conformations.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="methods.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb15-2"><a href="methods.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> AllChem</span>
+<span id="cb15-3"><a href="methods.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> threading <span class="im">import</span> active_count</span>
+<span id="cb15-4"><a href="methods.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="methods.html#cb15-5" aria-hidden="true" tabindex="-1"></a>num_thread <span class="op">=</span> active_count()</span>
+<span id="cb15-6"><a href="methods.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> optimize_3d(mol, method):</span>
+<span id="cb15-7"><a href="methods.html#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="methods.html#cb15-8" aria-hidden="true" tabindex="-1"></a>    mol <span class="op">=</span> Chem.AddHs(mol)</span>
+<span id="cb15-9"><a href="methods.html#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate initial 3D coordinates</span></span>
+<span id="cb15-10"><a href="methods.html#cb15-10" aria-hidden="true" tabindex="-1"></a>    params <span class="op">=</span> AllChem.ETKDG()</span>
+<span id="cb15-11"><a href="methods.html#cb15-11" aria-hidden="true" tabindex="-1"></a>    params.useRandomCoords<span class="op">=</span><span class="va">True</span></span>
+<span id="cb15-12"><a href="methods.html#cb15-12" aria-hidden="true" tabindex="-1"></a>    params.maxAttempts<span class="op">=</span><span class="dv">5000</span></span>
+<span id="cb15-13"><a href="methods.html#cb15-13" aria-hidden="true" tabindex="-1"></a>    AllChem.EmbedMolecule(mol, params)</span>
+<span id="cb15-14"><a href="methods.html#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb15-15"><a href="methods.html#cb15-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> method <span class="op">==</span> <span class="st">&#39;MMFF&#39;</span>:</span>
+<span id="cb15-16"><a href="methods.html#cb15-16" aria-hidden="true" tabindex="-1"></a>            <span class="co"># optimize the 3D structure using the MMFF method (suitable for optimizing small to medium-sized molecules)</span></span>
+<span id="cb15-17"><a href="methods.html#cb15-17" aria-hidden="true" tabindex="-1"></a>            AllChem.MMFFOptimizeMolecule(mol, maxIters<span class="op">=</span><span class="dv">200</span>, mmffVariant<span class="op">=</span><span class="st">&#39;MMFF94s&#39;</span>)</span>
+<span id="cb15-18"><a href="methods.html#cb15-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> method <span class="op">==</span> <span class="st">&#39;LOPT&#39;</span>:</span>
+<span id="cb15-19"><a href="methods.html#cb15-19" aria-hidden="true" tabindex="-1"></a>            <span class="co"># optimize the 3D structure using a combination of UFF and MMFF methods (can be used for optimizing larger and more complex molecules)</span></span>
+<span id="cb15-20"><a href="methods.html#cb15-20" aria-hidden="true" tabindex="-1"></a>            <span class="co"># create a PyForceField object and set its parameters</span></span>
+<span id="cb15-21"><a href="methods.html#cb15-21" aria-hidden="true" tabindex="-1"></a>            ff <span class="op">=</span> AllChem.UFFGetMoleculeForceField(mol)</span>
+<span id="cb15-22"><a href="methods.html#cb15-22" aria-hidden="true" tabindex="-1"></a>            ff.Initialize()</span>
+<span id="cb15-23"><a href="methods.html#cb15-23" aria-hidden="true" tabindex="-1"></a>            ff.Minimize()</span>
+<span id="cb15-24"><a href="methods.html#cb15-24" aria-hidden="true" tabindex="-1"></a>            AllChem.OptimizeMolecule(ff, maxIters<span class="op">=</span><span class="dv">500</span>)</span>
+<span id="cb15-25"><a href="methods.html#cb15-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> method <span class="op">==</span> <span class="st">&#39;CONFOPT&#39;</span>:</span>
+<span id="cb15-26"><a href="methods.html#cb15-26" aria-hidden="true" tabindex="-1"></a>            <span class="co"># optimize each conformation using the PyForceField object (to explore the conformational space of a molecule and identify the most energetically favorable conformations)</span></span>
+<span id="cb15-27"><a href="methods.html#cb15-27" aria-hidden="true" tabindex="-1"></a>            <span class="co"># generate 10 conformations using UFF</span></span>
+<span id="cb15-28"><a href="methods.html#cb15-28" aria-hidden="true" tabindex="-1"></a>            <span class="co"># create a PyForceField object and set its parameters</span></span>
+<span id="cb15-29"><a href="methods.html#cb15-29" aria-hidden="true" tabindex="-1"></a>            AllChem.EmbedMultipleConfs(mol, numConfs<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb15-30"><a href="methods.html#cb15-30" aria-hidden="true" tabindex="-1"></a>            ff <span class="op">=</span> AllChem.UFFGetMoleculeForceField(mol)</span>
+<span id="cb15-31"><a href="methods.html#cb15-31" aria-hidden="true" tabindex="-1"></a>            ff.Initialize()</span>
+<span id="cb15-32"><a href="methods.html#cb15-32" aria-hidden="true" tabindex="-1"></a>            ff.Minimize()</span>
+<span id="cb15-33"><a href="methods.html#cb15-33" aria-hidden="true" tabindex="-1"></a>            AllChem.OptimizeMoleculeConfs(mol, ff, maxIters<span class="op">=</span><span class="dv">300</span>, numThreads<span class="op">=</span>num_thread)</span>
+<span id="cb15-34"><a href="methods.html#cb15-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb15-35"><a href="methods.html#cb15-35" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;method should be from </span><span class="sc">{</span>[<span class="st">&#39;MMFF&#39;</span>, <span class="st">&#39;LOPT&#39;</span>, <span class="st">&#39;CONFOPT&#39;</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb15-36"><a href="methods.html#cb15-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb15-37"><a href="methods.html#cb15-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb15-38"><a href="methods.html#cb15-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mol</span></code></pre></div>
+<p>RDKit descriptors include a comprehensive set of descriptors calculated directly from the molecule’s structure. These descriptors encompass a wide range of molecular properties, including size, shape, polarity, and topological characteristics. They are widely used in QSAR modeling and virtual screening applications due to their comprehensive nature.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="methods.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb16-2"><a href="methods.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Descriptors</span>
+<span id="cb16-3"><a href="methods.html#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="methods.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to calculate all the possible descriptors</span></span>
+<span id="cb16-5"><a href="methods.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_descriptors(smiles, idx):</span>
+<span id="cb16-6"><a href="methods.html#cb16-6" aria-hidden="true" tabindex="-1"></a>    mol <span class="op">=</span> Chem.MolFromSmiles(smiles)</span>
+<span id="cb16-7"><a href="methods.html#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb16-8"><a href="methods.html#cb16-8" aria-hidden="true" tabindex="-1"></a>        mol <span class="op">=</span> optimize_3d(mol, <span class="st">&#39;LOPT&#39;</span>)</span>
+<span id="cb16-9"><a href="methods.html#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb16-10"><a href="methods.html#cb16-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb16-11"><a href="methods.html#cb16-11" aria-hidden="true" tabindex="-1"></a>    desc_lst <span class="op">=</span> []</span>
+<span id="cb16-12"><a href="methods.html#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> descriptor_name, descriptor_function <span class="kw">in</span> Descriptors.descList:</span>
+<span id="cb16-13"><a href="methods.html#cb16-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb16-14"><a href="methods.html#cb16-14" aria-hidden="true" tabindex="-1"></a>            descriptor_value <span class="op">=</span> descriptor_function(mol)</span>
+<span id="cb16-15"><a href="methods.html#cb16-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> descriptor_value <span class="op">==</span> pd.notnull:</span>
+<span id="cb16-16"><a href="methods.html#cb16-16" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f&#39;No value for </span><span class="sc">{</span>descriptor_name<span class="sc">}</span><span class="ss">, output: </span><span class="sc">{</span>descriptor_value<span class="sc">}</span><span class="ss"> for </span><span class="sc">{</span>idx<span class="sc">}</span><span class="ss">:</span><span class="sc">{</span>smiles<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb16-17"><a href="methods.html#cb16-17" aria-hidden="true" tabindex="-1"></a>                desc_lst.append(np.nan)</span>
+<span id="cb16-18"><a href="methods.html#cb16-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb16-19"><a href="methods.html#cb16-19" aria-hidden="true" tabindex="-1"></a>                desc_lst.append(descriptor_value)</span>
+<span id="cb16-20"><a href="methods.html#cb16-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span>:</span>
+<span id="cb16-21"><a href="methods.html#cb16-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">pass</span></span>
+<span id="cb16-22"><a href="methods.html#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> desc_lst</span>
+<span id="cb16-23"><a href="methods.html#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="methods.html#cb16-24" aria-hidden="true" tabindex="-1"></a>descriptor_list <span class="op">=</span> []</span>
+<span id="cb16-25"><a href="methods.html#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, sml <span class="kw">in</span> <span class="bu">enumerate</span>(tqdm(smiles)):</span>
+<span id="cb16-26"><a href="methods.html#cb16-26" aria-hidden="true" tabindex="-1"></a>    compound_desc <span class="op">=</span> calculate_descriptors(sml, idx)</span>
+<span id="cb16-27"><a href="methods.html#cb16-27" aria-hidden="true" tabindex="-1"></a>    descriptor_list.append(compound_desc)</span>
+<span id="cb16-28"><a href="methods.html#cb16-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-29"><a href="methods.html#cb16-29" aria-hidden="true" tabindex="-1"></a>rdkit_desc_df <span class="op">=</span> pd.DataFrame(descriptor_list, columns<span class="op">=</span>[name <span class="cf">for</span> name, _ <span class="kw">in</span> Descriptors.descList]).astype(np.float64)</span>
+<span id="cb16-30"><a href="methods.html#cb16-30" aria-hidden="true" tabindex="-1"></a>rdkit_desc_df <span class="op">=</span> rdkit_desc_df.dropna(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb16-31"><a href="methods.html#cb16-31" aria-hidden="true" tabindex="-1"></a>rdkit_desc <span class="op">=</span> rdkit_desc_df.values.astype(np.float64)</span></code></pre></div>
+<p>Finally, Mordred descriptors provide a vast array of over 1600 three-dimensional, two-dimensional, and one-dimensional descriptors. These descriptors represent a wide variety of chemical information, ranging from simple atom counts and molecular weight to more complex descriptors such as electrotopological state indices and autocorrelation descriptors. The rich information provided by Mordred descriptors makes them an excellent choice for modeling complex molecular behaviors.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="methods.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mordred <span class="im">import</span> Calculator, descriptors</span>
+<span id="cb17-2"><a href="methods.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="methods.html#cb17-3" aria-hidden="true" tabindex="-1"></a>molecules <span class="op">=</span> [Chem.MolFromSmiles(sml) <span class="cf">for</span> sml <span class="kw">in</span> smiles]</span>
+<span id="cb17-4"><a href="methods.html#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="methods.html#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to calculate all the possible descriptors</span></span>
+<span id="cb17-6"><a href="methods.html#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_mordred_descriptors(mol, optimization<span class="op">=</span> <span class="st">&#39;LOPT&#39;</span>):</span>
+<span id="cb17-7"><a href="methods.html#cb17-7" aria-hidden="true" tabindex="-1"></a>    mol <span class="op">=</span> optimize_3d(mol, optimization)</span>
+<span id="cb17-8"><a href="methods.html#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a Mordred calculator object</span></span>
+<span id="cb17-9"><a href="methods.html#cb17-9" aria-hidden="true" tabindex="-1"></a>    calculator <span class="op">=</span> Calculator(descriptors)</span>
+<span id="cb17-10"><a href="methods.html#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> calculator(mol)</span>
+<span id="cb17-11"><a href="methods.html#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="methods.html#cb17-12" aria-hidden="true" tabindex="-1"></a>mdrd_descriptor_list <span class="op">=</span> []</span>
+<span id="cb17-13"><a href="methods.html#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, mol <span class="kw">in</span> <span class="bu">enumerate</span>(tqdm(molecules)):</span>
+<span id="cb17-14"><a href="methods.html#cb17-14" aria-hidden="true" tabindex="-1"></a>    mol_desc <span class="op">=</span> calculate_mordred_descriptors(mol)</span>
+<span id="cb17-15"><a href="methods.html#cb17-15" aria-hidden="true" tabindex="-1"></a>    desc <span class="op">=</span> <span class="bu">list</span>(mol_desc.asdict().values())</span>
+<span id="cb17-16"><a href="methods.html#cb17-16" aria-hidden="true" tabindex="-1"></a>    mdrd_descriptor_list.append(desc)</span>
+<span id="cb17-17"><a href="methods.html#cb17-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-18"><a href="methods.html#cb17-18" aria-hidden="true" tabindex="-1"></a>mordred_desc_df <span class="op">=</span> pd.DataFrame(mdrd_descriptor_list, columns<span class="op">=</span><span class="bu">list</span>(mol_desc.asdict().keys())).astype(np.float64)</span>
+<span id="cb17-19"><a href="methods.html#cb17-19" aria-hidden="true" tabindex="-1"></a>mordred_desc_df <span class="op">=</span> mordred_desc_df.dropna(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb17-20"><a href="methods.html#cb17-20" aria-hidden="true" tabindex="-1"></a>mordred_desc <span class="op">=</span> mordred_desc_df.values.astype(np.float64)</span></code></pre></div>
+<p>To summarize, the featureization process leverages multiple molecular descriptors to capture molecular structures’ complexity and diversity. Each descriptor contributes unique information about the molecule, resulting in a comprehensive and informative representation.</p>
+</div>
+<div id="building-covid-19-bio-graph" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Building COVID-19 Bio-Graph<a href="methods.html#building-covid-19-bio-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
+</div>
 </div>
 </div>
             </section>
@@ -196,6 +736,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
