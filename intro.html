@@ -23,7 +23,7 @@
 <meta name="author" content="Nima Chamyani" />
 
 
-<meta name="date" content="2023-05-02" />
+<meta name="date" content="2023-05-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -98,17 +162,29 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#graph-representation-learning"><i class="fa fa-check"></i><b>1.1</b> Graph representation learning</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#cell-profiling"><i class="fa fa-check"></i><b>1.2</b> Cell profiling</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#why-graph-representation-learning"><i class="fa fa-check"></i><b>1.3</b> Why graph representation learning?</a></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#graphs"><i class="fa fa-check"></i><b>1.1</b> Graphs</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#graph-representation-learning"><i class="fa fa-check"></i><b>1.2</b> Graph representation learning</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#cell-profiling"><i class="fa fa-check"></i><b>1.3</b> Cell profiling</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#why-graph-representation-learning"><i class="fa fa-check"></i><b>1.4</b> Why graph representation learning?</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods and materials</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#about-bookdown"><i class="fa fa-check"></i><b>2.1</b> About Bookdown</a></li>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#data-acquisition-softwares-and-libraries"><i class="fa fa-check"></i><b>2.1</b> Data acquisition, softwares and libraries</a></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#data-preprocessing"><i class="fa fa-check"></i><b>2.2</b> Data Preprocessing</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#covid-19-dataset"><i class="fa fa-check"></i><b>2.2.1</b> COVID-19 Dataset</a>
+<ul>
+<li class="chapter" data-level="2.2.1.1" data-path="methods.html"><a href="methods.html#normalization"><i class="fa fa-check"></i><b>2.2.1.1</b> Normalization</a></li>
+<li class="chapter" data-level="2.2.1.2" data-path="methods.html"><a href="methods.html#dimensionality-reductin"><i class="fa fa-check"></i><b>2.2.1.2</b> Dimensionality Reductin</a></li>
+<li class="chapter" data-level="2.2.1.3" data-path="methods.html"><a href="methods.html#development-of-a-binary-classification-of-data"><i class="fa fa-check"></i><b>2.2.1.3</b> Development of a binary classification of data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#featurizing-compounds"><i class="fa fa-check"></i><b>2.2.2</b> Featurizing compounds</a></li>
+<li class="chapter" data-level="2.2.3" data-path="methods.html"><a href="methods.html#building-covid-19-bio-graph"><i class="fa fa-check"></i><b>2.2.3</b> Building COVID-19 Bio-Graph</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#about-bookdown-1"><i class="fa fa-check"></i><b>3.1</b> About Bookdown</a></li>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#about-bookdown"><i class="fa fa-check"></i><b>3.1</b> About Bookdown</a></li>
 </ul></li>
 </ul>
 
@@ -134,8 +210,8 @@ div.csl-indent {
 <p>Meanwhile, cell profiling has emerged as a powerful high-throughput approach to quantifying the phenotypic features of cells under various conditions, such as genetic alterations or chemical perturbations. In drug discovery, functional genomics, and personalized medicine, cell profiling can be used to evaluate cellular response to different stimuli rapidly and accurately. Researchers can analyze cell images to extract meaningful features, enabling them to characterize cellular phenotypes and identify biomarkers associated with specific diseases or treatments using advanced imaging techniques and computational methods.</p>
 <p>As a result of combining graph representation learning with cell profiling, we offer an innovative way to analyze cellular response data that contains a wealth of information. Using this integration, we will be able to construct an integrated network of chemical perturbations, cellular phenotypes, and other biological entities. Graph representation learning techniques will then be employed to identify hidden relationships and patterns within the network, potentially uncovering new drug targets, combinations of therapies, or mechanisms of action that may not have been apparent through traditional analysis methods. GNNs have been demonstrated to be effective in analyzing morphological profiles of cellular responses to drug perturbations in studies such as Xie et al. (2021).</p>
 <p>An innovative and powerful method of analyzing complex biomedical data can be found in the intersection of graph representation learning and cell profiling. The goal of our research is to unlock new insights into how chemical compounds, cellular phenotypes, and biological entities interact, ultimately facilitating the discovery and development of new drugs.</p>
-<div id="graph-representation-learning" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Graph representation learning<a href="intro.html#graph-representation-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="graphs" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Graphs<a href="intro.html#graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The concept of networks has become ubiquitous in biology and medicine. They can represent molecular interaction, protein-protein relations, gene-disease connection and etc. Biomedical knowledge and biological systems represented as graphs are more useful due to the multitude of biological entities and associations they hold. Understandably this became a highly effective motivation for the development of deep learning techniques that can be performed on networks. These machine learning methods are generally categorised under graph representation learning. Also, finding architectural features of molecular interaction in the cell follows the same pattern that we can observe in different complex networks allowed the expertise from well-understood non-biological systems like the World Wide Web or social sciences, to be useful in characterizing relationships that govern the biological systems too. Additionally, networks are often multi-modal and diverse in terms of data and this not only enhances the performance of predictive deep-learning models but also enables their broad generalization. Besides, it makes the models easier to interpret and understand<span class="citation">(<a href="#ref-li2022graph" role="doc-biblioref">Li, Huang, and Zitnik 2022</a>)</span>.</p>
 <p>Graphs (networks) map out different biological entities to a set of nodes and links. Nodes or vertices are the components of the biological system like proteins, genes, drug compounds or any other entities. Links or edges are the interaction or relation between two components (nodes). The structure of the graph can be explained by these topological units. Together they will define the dynamics of the network<span class="citation">(<a href="#ref-barabasi2004network" role="doc-biblioref">Barabasi and Oltvai 2004</a>)</span>.</p>
 <div style="text-align: center;">
@@ -166,16 +242,35 @@ div.csl-indent {
 <p>Graph representation learning has become a leading machine learning approach for networks, allowing for the principles of networks to be realized in a compact vectorial space, or embeddings. This technique involves specifying nonlinear transformation functions that map nodes to points in the embedding space. Various types of graphs can be used for representation learning, including simple, weighted, attributed, multimodal, heterogeneous, knowledge graphs, multi-layer graphs, temporal graphs, and spatial graphs. These graph types can be combined to create new objects, such as multi-layer spatial or multimodal temporal graphs.</p>
 <p>In conclusion, network science and graph representation learning have become increasingly important tools for studying complex systems. By leveraging the power of these techniques, researchers can gain new insights into the structure and dynamics of complex networks in various fields, leading to a deeper understanding of the world around us.</p>
 </div>
-<div id="cell-profiling" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Cell profiling<a href="intro.html#cell-profiling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="graph-representation-learning" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Graph representation learning<a href="intro.html#graph-representation-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For understanding complex networks and extracting meaningful information from them, graph representation learning has emerged as a powerful approach. To achieve various downstream tasks such as node classification, link prediction, and graph classification, graph data must be learned and encoded to learn and encode their inherent structure and features. We will provide a brief overview of graph representation learning concepts and methods, emphasizing their relevance in various applications, in this section.</p>
+<p>Graph embedding methods aim to represent nodes, edges, or entire graphs as continuous low-dimensional vectors while preserving the underlying graph structure. These embeddings can be derived using both unsupervised and supervised learning paradigms. Through the use of graph connectivity patterns, unsupervised methods like DeepWalk, node2vec, and LINE learn latent feature representations, while supervised methods like GraphSAGE and Graph Convolutional Networks (GCN) utilize node features and labels to guide the learning process.</p>
+<p>In the realm of graph neural networks (GNNs), message-passing techniques like GGSNN and MPNN provide a powerful way to learn node and edge representations by propagating and aggregating information from local neighborhoods. These methods have been extended to non-Euclidean domains with frameworks like ChebyNet, GAT, and MoNet, which capture the intrinsic geometry and topology of the graph.</p>
+<p>An important aspect of graph representation learning is the development of autoencoders, such as SDNE, DNGR, and VGAE, which are able to learn low-dimensional embeddings without supervision based on the graph’s structure. To reconstruct the original graph from the learned embeddings, matrix factorization, skip-gram models, and other techniques are often employed. Autoencoders can also be combined with graph regularization and manifold learning methods, such as Isomap, MDS, and LLE, to further improve the quality of the learned representations.</p>
+<p>For generating graphs with desirable properties or learning latent graph spaces, graph generation models have been developed, such as GCPN, JT-VAE, and GraphRNN. In applications like drug discovery, generating new chemical structures with specific characteristics is of paramount importance, which makes these models particularly useful.</p>
+<div style="text-align: center;">
+<figure>
+<iframe src="assets/network-representation-learning.html" width="95%" height="550px" alt="Graph representation learning" id="graph-representation">
+</iframe>
+<figcaption>
+<em>Graph representation learning methods</em>
+</figcaption>
+</figure>
+</div>
+<p>There have been significant advancements in drug discovery, genomics, and proteomics due to machine learning applied to biomedical graphs. Different real-world problems have been studied and applied to canonical graph prediction tasks, such as node classification, link prediction, and graph classification. Furthermore, recent advances in latent graph learning have shown promise in uncovering hidden patterns within complex networks.</p>
+<p>It has already shown that graph representation learning has the potential to transform our understanding of complex networks as it is a rapidly evolving research area. Researchers continue to develop innovative approaches for analyzing and modeling graph data by combining graph theory, network diffusion, topological data analysis, and manifold learning. The vast and complex world of graphs will become even more meaningful as our knowledge in this field advances.</p>
+</div>
+<div id="cell-profiling" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Cell profiling<a href="intro.html#cell-profiling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Cell painting and cell profiling are advanced high-content imaging and analysis techniques used in cell biology to comprehensively characterize cellular phenotypes. These methods combine high-throughput microscopy with computational analysis to simultaneously investigate multiple cellular features, enabling the study of complex biological systems and the discovery of novel drug targets or biomarkers. his is particularly important in distinguishing the healthy and diseased states of the cell. Studies showed the great capability of this method in disease recognition or looking for many treatments effect within a single day. The output of this high-throughput microscopy is images which by itself can be an excellent source of unbiased information for analysis. There have been numerous studies that used deep learning on these images and resulted in models with unmatched power for identifying disease-specific phenotypes in clinical diagnostics and chemical lead hopping in drug discovery and so on. Additionally, specific phenotype features of any perturbation can be extracted to be used for data mining and profile analysis<span class="citation">(<a href="#ref-rietdijk2022morphological" role="doc-biblioref">Rietdijk et al. 2022</a>)</span>.</p>
 <p>With cell painting, different type of dyes are used to stain cells and target specific subcellular compartments or structures. By multiplexing several cellular features, including organelles, cytoskeletons, and nuclear compartments, several cellular features can be visualized simultaneously. By imaging stained cells with high-throughput microscopy, numerous morphological, textural, and intensity-based features are captured, resulting in a wealth of quantitative data. Subsequently, cell profiling is employed to analyze the acquired images. This process leverages computational algorithms, such as machine learning and deep learning, to extract quantitative information from the images. The resulting high-dimensional data, often referred to as “features” or “phenotypic fingerprints”, is used to classify cells, identify functional relationships, or reveal previously unrecognized patterns.</p>
 <p>These methods have been used to address various biological questions. Bray et al. (2016), for example, utilized these techniques to create a morphological map of human cells exposed to a variety of bioactive compounds. The results of their research have led to the identification of novel compound-target interactions, demonstrated the potential of cell painting as a tool for high-throughput drug discovery, and provided a comprehensive resource for the scientific community. In addition, cell painting and cell profiling have allowed scientists to dissect signaling pathways, elucidate gene function, and understand disease mechanisms. Aside from uncovering novel gene functions and dissecting cellular networks, researchers have used these methods to study how genetic or chemical perturbations affect cell phenotypes.</p>
 <p>Drug discovery, precision medicine, and basic research can all benefit from cell painting and cell profiling. In addition to revealing novel drug targets, these techniques can also identify potential therapeutic compounds and elucidate the mechanisms underlying disease pathology by providing a comprehensive, systems-level view of cellular phenotypes. The high-throughput nature of these methods also allows rapid screening of vast compound libraries or genetic perturbations, which accelerates scientific discovery and facilitates the development of personalized therapeutics.</p>
 <p>Our understanding of cellular biology has been greatly enriched by the use of cell painting and cell profiling, powerful, high-content imaging and analysis techniques. These methods have aided in the discovery of new drugs, precision medicine, and basic research by offering a comprehensive view of cellular phenotypes, and they remain an essential tool in modern cell biology.</p>
 </div>
-<div id="why-graph-representation-learning" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Why graph representation learning?<a href="intro.html#why-graph-representation-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="why-graph-representation-learning" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Why graph representation learning?<a href="intro.html#why-graph-representation-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When dealing with data structured as graphs or networks, such as cell painting data, graph representation learning provides a powerful alternative to conventional deep learning techniques. The cell painting technique uses dyes to stain multiple cell compartments to capture rich morphological information. The inherent complexity and relational nature of cell painting data can be more effectively modeled using graph representation learning techniques and here’s why.</p>
 <p>Graph representation learning is explicitly designed to model complex relationships between nodes (entities) and edges (connections) within a graph, whereas deep learning techniques, such as feedforward neural networks and convolutional neural networks (CNNs), use fixed-size inputs. As graph representation learning retains the inherent structure and connections in the data, it can better capture dependencies and interactions between entities, improving prediction performance. Also, the graph representation learning algorithm can handle a variety of input data types. Learning can be enhanced by including rich, multimodal information to gain a more comprehensive understanding of the underlying relationships. By doing so, we can include more information about a compound, such as its connection to proteins or biological pathways. Furthermore, graph representation learning algorithms are invariant to isomorphism. They can produce consistent node embeddings and predictions regardless of the order or label of the nodes. For graph-structured data, this property is especially important, as it ensures that learned representations and models are resilient to arbitrary relabeling or reordering. Since conventional deep learning techniques are sensitive to the order or arrangement of input features, graph data may limit their applicability and performance. Finnaly , the sparse and local nature of graph data can be exploited to make graph representation learning and inference efficient. In GraphSAGE and GraphConvolutional Networks (GCNs), for example, localized convolutional operations are applied to graphs, enabling efficient neighborhood information aggregation and scalable learning of large-scale graphs. In contrast, conventional deep learning techniques may require dense representations or extensive memory resources, particularly when dealing with high-dimensional input data.</p>
 
@@ -259,6 +354,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
