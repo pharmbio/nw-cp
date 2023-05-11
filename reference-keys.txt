@@ -6,11 +6,15 @@ why-graph-representation-learning
 methods
 data-acquisition-softwares-and-libraries
 data-preprocessing
-covid-19-dataset
+covid-19-cell-profilling-data
 normalization
-dimensionality-reductin
+dimensionality-reduction
 development-of-a-binary-classification-of-data
+compound-protein-and-pathway-data-aggregation
+featurizing-the-biomedical-entities
 featurizing-compounds
+featurizing-proteins
+featurizing-pathways
 building-covid-19-bio-graph
 results
 about-bookdown

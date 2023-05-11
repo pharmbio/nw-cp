@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Network analysis approach using morphological profiling of chemical perturbation</title>
-  <meta name="description" content="This is a master’s project manuscript for pharmaceutical modeling program" />
+  <meta name="description" content="Exploring the intersection of graph representation learning and cell profiling" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Network analysis approach using morphological profiling of chemical perturbation" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is a master’s project manuscript for pharmaceutical modeling program" />
+  <meta property="og:description" content="Exploring the intersection of graph representation learning and cell profiling" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Network analysis approach using morphological profiling of chemical perturbation" />
   
-  <meta name="twitter:description" content="This is a master’s project manuscript for pharmaceutical modeling program" />
+  <meta name="twitter:description" content="Exploring the intersection of graph representation learning and cell profiling" />
   
 
 <meta name="author" content="Nima Chamyani" />
 
 
-<meta name="date" content="2023-05-10" />
+<meta name="date" content="2023-05-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intersecting Graph Representation Learning and Cell Profiling: A Novel Approach to Analyzing Complex Biomedical Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim"><i class="fa fa-check"></i>Aim</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-you-would-find-here"><i class="fa fa-check"></i>What you would find here</a></li>
@@ -172,14 +172,20 @@ div.csl-indent {
 <li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#data-acquisition-softwares-and-libraries"><i class="fa fa-check"></i><b>2.1</b> Data acquisition, softwares and libraries</a></li>
 <li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#data-preprocessing"><i class="fa fa-check"></i><b>2.2</b> Data Preprocessing</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#covid-19-dataset"><i class="fa fa-check"></i><b>2.2.1</b> COVID-19 Dataset</a>
+<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#covid-19-cell-profilling-data"><i class="fa fa-check"></i><b>2.2.1</b> COVID-19 Cell profilling Data</a>
 <ul>
 <li class="chapter" data-level="2.2.1.1" data-path="methods.html"><a href="methods.html#normalization"><i class="fa fa-check"></i><b>2.2.1.1</b> Normalization</a></li>
-<li class="chapter" data-level="2.2.1.2" data-path="methods.html"><a href="methods.html#dimensionality-reductin"><i class="fa fa-check"></i><b>2.2.1.2</b> Dimensionality Reductin</a></li>
+<li class="chapter" data-level="2.2.1.2" data-path="methods.html"><a href="methods.html#dimensionality-reduction"><i class="fa fa-check"></i><b>2.2.1.2</b> Dimensionality Reduction</a></li>
 <li class="chapter" data-level="2.2.1.3" data-path="methods.html"><a href="methods.html#development-of-a-binary-classification-of-data"><i class="fa fa-check"></i><b>2.2.1.3</b> Development of a binary classification of data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#featurizing-compounds"><i class="fa fa-check"></i><b>2.2.2</b> Featurizing compounds</a></li>
-<li class="chapter" data-level="2.2.3" data-path="methods.html"><a href="methods.html#building-covid-19-bio-graph"><i class="fa fa-check"></i><b>2.2.3</b> Building COVID-19 Bio-Graph</a></li>
+<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#compound-protein-and-pathway-data-aggregation"><i class="fa fa-check"></i><b>2.2.2</b> Compound, Protein and Pathway Data Aggregation</a></li>
+<li class="chapter" data-level="2.2.3" data-path="methods.html"><a href="methods.html#featurizing-the-biomedical-entities"><i class="fa fa-check"></i><b>2.2.3</b> Featurizing the Biomedical Entities</a>
+<ul>
+<li class="chapter" data-level="2.2.3.1" data-path="methods.html"><a href="methods.html#featurizing-compounds"><i class="fa fa-check"></i><b>2.2.3.1</b> Featurizing Compounds</a></li>
+<li class="chapter" data-level="2.2.3.2" data-path="methods.html"><a href="methods.html#featurizing-proteins"><i class="fa fa-check"></i><b>2.2.3.2</b> Featurizing Proteins</a></li>
+<li class="chapter" data-level="2.2.3.3" data-path="methods.html"><a href="methods.html#featurizing-pathways"><i class="fa fa-check"></i><b>2.2.3.3</b> Featurizing Pathways</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.4" data-path="methods.html"><a href="methods.html#building-covid-19-bio-graph"><i class="fa fa-check"></i><b>2.2.4</b> Building COVID-19 Bio-Graph</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
@@ -206,18 +212,39 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">Network analysis approach using morphological profiling of chemical perturbation</h1>
 <p class="author"><em>Nima Chamyani</em></p>
-<p class="date"><em>2023-05-10</em></p>
+<p class="date"><em>2023-05-11</em></p>
 </div>
-<div id="what-is-this" class="section level1 unnumbered hasAnchor">
-<h1>What is this?<a href="index.html#what-is-this" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><em>This is a master’s project manuscript for pharmaceutical modeling program at Uppsala University.</em></p>
+<div id="intersecting-graph-representation-learning-and-cell-profiling-a-novel-approach-to-analyzing-complex-biomedical-data" class="section level1 unnumbered hasAnchor">
+<h1>Intersecting Graph Representation Learning and Cell Profiling: A Novel Approach to Analyzing Complex Biomedical Data<a href="index.html#intersecting-graph-representation-learning-and-cell-profiling-a-novel-approach-to-analyzing-complex-biomedical-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+<p><br />
+<img src="./assets/logo.png" style="width:10.0%" alt="image" /><br />
+<span class="smallcaps">Uppsala Universitet</span><br />
+Department of Pharmaceutical Biosciences<br />
+</p>
+<hr />
+<p><em>This is a master’s project documentation for pharmaceutical modeling program at Uppsala University.</em><br />
+</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<p><strong>Pharmaceutical Bioinformatics Research Group</strong><br />
+</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<p><span class="smallcaps">Nima Chamyani <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<a href="mailto:nima.chamyani.0670@student.uu.se" style="color: #1DA1F2; font-size:0.8em;">
+<i class="fas fa-envelope"></i>
+</a></span></p>
+</div>
+<p><br />
+</p>
 <div id="aim" class="section level2 unnumbered hasAnchor">
 <h2>Aim<a href="index.html#aim" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>An innovative and powerful method of analyzing complex biomedical data can be found in the intersection of graph representation learning and cell profiling. The goal of our research is to unlock new insights into how chemical compounds, cellular phenotypes, and biological entities like proteins and biological pathways interact, ultimately facilitating the discovery and development of new drugs.</p>
+<p>An innovative and powerful method of analyzing complex biomedical data can be found in the intersection of graph representation learning and cell profiling. The goal of our research is to unlock new insights into how complex relation between chemical compounds, cellular phenotypes, and biological entities like proteins and biological pathways can be modeled for different purposes, ultimately facilitating the discovery and development of new drugs.</p>
 </div>
 <div id="what-you-would-find-here" class="section level2 unnumbered hasAnchor">
 <h2>What you would find here<a href="index.html#what-you-would-find-here" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This manuscript provides an in-depth account of the procedures and methodologies executed within the scope of this research project, encompassing a thorough presentation of the implemented codes and their deployment. The result and discussion is also included.</p>
+<p>This documentation provides an in-depth account of the procedures and methodologies used within the scope of this research project, including a thorough and detailed explanation of the implemented codes and their deployment. The result and discussion is also included at the end of the documentation.</p>
 
 </div>
 </div>
