@@ -1,2 +1,15 @@
+.title {
+    display: none;
+}
 
+.author {
+    display: none;
+}
 
+.date {
+    display: none;
+}
+
+.smallcaps {
+    font-variant: small-caps;
+}
