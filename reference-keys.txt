@@ -15,6 +15,11 @@ featurizing-the-biomedical-entities
 featurizing-compounds
 featurizing-proteins
 featurizing-pathways
-building-covid-19-bio-graph
+covid-19-bio-graph
+representing-chemical-molecules-as-graph
+models
+graph-level-molecular-predictor-glmp
+bio-graph-integrative-classifierregressor-biogicbiogir
+optimized-molecular-graph-generator-omg
 results
 about-bookdown
