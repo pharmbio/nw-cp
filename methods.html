@@ -191,10 +191,14 @@ div.csl-indent {
 <li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#models"><i class="fa fa-check"></i><b>2.3</b> Models</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="methods.html"><a href="methods.html#graph-level-molecular-predictor-glmp"><i class="fa fa-check"></i><b>2.3.1</b> Graph-Level Molecular Predictor (GLMP)</a></li>
-<li class="chapter" data-level="2.3.2" data-path="methods.html"><a href="methods.html#bio-graph-integrative-classifierregressor-biogicbiogir"><i class="fa fa-check"></i><b>2.3.2</b> Bio-Graph Integrative Classifier/Regressor (BioGIC/BioGIR)</a></li>
-<li class="chapter" data-level="2.3.3" data-path="methods.html"><a href="methods.html#optimized-molecular-graph-generator-omg"><i class="fa fa-check"></i><b>2.3.3</b> Optimized Molecular Graph Generator (OMG)</a></li>
-<li class="chapter" data-level="2.3.4" data-path="methods.html"><a href="methods.html#model-enhancement-ensembling-and-self-supervised-learning"><i class="fa fa-check"></i><b>2.3.4</b> Model Enhancement: Ensembling and Self-Supervised Learning</a></li>
+<li class="chapter" data-level="2.3.2" data-path="methods.html"><a href="methods.html#bio-graph-integrative-classifierregressor-biogicbiogir"><i class="fa fa-check"></i><b>2.3.2</b> Bio-Graph Integrative Classifier/Regressor (BioGIC/BioGIR)</a>
+<ul>
+<li class="chapter" data-level="2.3.2.1" data-path="methods.html"><a href="methods.html#classificationregression"><i class="fa fa-check"></i><b>2.3.2.1</b> Classification/Regression</a></li>
+<li class="chapter" data-level="2.3.2.2" data-path="methods.html"><a href="methods.html#predicting-joint-effect-of-nodes-chemical-combination"><i class="fa fa-check"></i><b>2.3.2.2</b> Predicting joint effect of nodes (Chemical Combination)</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3.3" data-path="methods.html"><a href="methods.html#optimized-molecular-graph-generator-omg"><i class="fa fa-check"></i><b>2.3.3</b> Optimized Molecular Graph Generator (OMG)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="methods.html"><a href="methods.html#model-enhancement-ensembling-and-self-supervised-learning"><i class="fa fa-check"></i><b>2.4</b> Model Enhancement: Ensembling and Self-Supervised Learning</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
 <ul>
@@ -240,20 +244,20 @@ div.csl-indent {
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
-<col width="14%" />
-<col width="4%" />
-<col width="2%" />
-<col width="2%" />
-<col width="3%" />
-<col width="12%" />
-<col width="5%" />
-<col width="4%" />
-<col width="5%" />
-<col width="2%" />
 <col width="6%" />
-<col width="5%" />
 <col width="6%" />
-<col width="16%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -311,10 +315,7 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>.
-.
-.
-|54366 rows, 2140 columns|</p>
+<p>. . . |54366 rows, 2140 columns|</p>
 <p>During the preparation phase, the first step involved dropping empty features, i.e., columns with no values or with a standard deviation (SD) of 0. The dataset was then segregated into numeric columns, further filtered down to ‘phenotype features’ and ‘metadata’. The ‘phenotype features’ included numeric columns excluding those with certain strings such as ‘Metadata’, ‘Number’, ‘Outlier’, ‘ImageQuality’, ‘cmpd_conc’, ‘Total’, ‘Flag’ and ‘Site’. The difference between the number of numeric columns and the number of phenotype features gives the number of ‘metadata’.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="methods.html#cb1-1" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> <span class="bu">list</span>()</span>
 <span id="cb1-2"><a href="methods.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> df.columns:</span>
@@ -366,10 +367,7 @@ div.csl-indent {
 <span id="cb5-9"><a href="methods.html#cb5-9" aria-hidden="true" tabindex="-1"></a>PCA_model.plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span></code></pre></div>
 <div style="text-align: center;">
 <figure>
-<img src="assets/pca_1.png"
-         alt="Graph basics"
-         id="graph-basics"
-         style="width: 90%; height: auto;">
+<img src="assets/pca_1.png" alt="Graph basics" id="graph-basics" style="width: 90%; height: auto;"/>
 </figure>
 </div>
 <p>Using outlier detection method like the Hotelling T2 test and the squared prediction error (SPE/DmodX) just one outlier were found in the data which was decided to remain in data.</p>
@@ -379,10 +377,7 @@ div.csl-indent {
 <span id="cb6-4"><a href="methods.html#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div style="text-align: center;">
 <figure>
-<img src="assets/pca_biplot.png"
-         alt="Graph basics"
-         id="graph-basics"
-         style="width: 90%; height: auto;">
+<img src="assets/pca_biplot.png" alt="Graph basics" style="width: 90%; height: auto;"/>
 </figure>
 </div>
 <p>The loading values obtained from PCA were subsequently utilized as input for a k-means clustering algorithm, enabling the clustering of features according to their loadings. The idea is to find the features that provide same information and cluster them together. The process begins with the execution of PCA, which is then followed by the deployment of k-means clustering on the PCA loadings. This arrangement allows features to be clustered based on their loadings. This can be construed as their significance or contribution to the data variance then a new feature is calculated for every cluster. This feature represents the average of all features contained within that specific cluster.</p>
@@ -478,22 +473,16 @@ div.csl-indent {
 <p>Finally, PCA has been performed again, this time exclusively on the selected features.</p>
 <div style="text-align: center;">
 <figure>
-<img src="assets/pca_16.png"
-         alt="Graph basics"
-         id="graph-basics"
-         style="width: 100%; height: auto;">
+<img src="assets/pca_16.png" alt="Graph basics" style="width: 100%; height: auto;"/>
 </figure>
 </div>
 <p align="center">
-<a href="https://pharmbio.github.io/nw-cp/assets/pca_16.html">Link to see interactive plot</a>
+<p><a href="https://pharmbio.github.io/nw-cp/assets/pca_16.html">Link to see interactive plot</a></p>
 </p>
 <p>The PCA results demonstrate that the 10 principal components can now explain a very high percentage (99.91%) of the variance. The first principle component improved from describing 75.1 percent of variance to 93.0 percent. This indicates that the selected features capture most of the data variability. The value of PC1 was used for regression models as the target value.</p>
 <div style="text-align: center;">
 <figure>
-<img src="assets/pca_2.png"
-         alt="Graph basics"
-         id="graph-basics"
-         style="width: 90%; height: auto;">
+<img src="assets/pca_2.png" alt="Graph basics" style="width: 90%; height: auto;"/>
 </figure>
 </div>
 </div>
@@ -535,20 +524,14 @@ div.csl-indent {
 <span id="cb10-31"><a href="methods.html#cb10-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div style="text-align: center;">
 <figure>
-<img src="assets/KDE_ECR.png"
-         alt="Graph basics"
-         id="graph-basics"
-         style="width: 70%; height: auto;">
+<img src="assets/KDE_ECR.png" alt="Graph basics" style="width: 70%; height: auto;"/>
 </figure>
 </div>
 <p>The intersection of these confidence regions was then examined. The PCA1 value of 5 at this intersection was hypothesized to be an effective threshold for binary classification of compounds. Any compound with a PCA1 value greater than this threshold was classified as ‘active’, and any compound with a PCA1 value less than this threshold was classified as ‘inactive’.</p>
 <p>Importantly, this approach allowed the study to estimate a suitable classification threshold but also to visualize the uncertainty around this threshold and the potential overlap between the two classes. The method provided a data-driven way to set the classification threshold and offered insights into the inherent complexity of the data.</p>
 <div style="text-align: center;">
 <figure>
-<img src="assets/ECIRegion_R.png"
-         alt="Graph basics"
-         id="graph-basics"
-         style="width: 80%; height: auto;">
+<img src="assets/ECIRegion_R.png" alt="Graph basics" style="width: 80%; height: auto;"/>
 </figure>
 </div>
 <p>It should be noted that the assumptions of the Gaussian distribution and independent identically distributed data inherent to this method may not hold in all cases. Therefore, the results should be interpreted with caution. Further, the use of PCA1 values alone for classification may oversimplify the problem if the active and inactive compounds differ along other principal components as well. Therefore, additional analyses are recommended to validate and refine this binary classification model.</p>
@@ -769,14 +752,14 @@ div.csl-indent {
 <span id="cb21-19"><a href="methods.html#cb21-19" aria-hidden="true" tabindex="-1"></a>mordred_desc_df <span class="op">=</span> mordred_desc_df.dropna(axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb21-20"><a href="methods.html#cb21-20" aria-hidden="true" tabindex="-1"></a>mordred_desc <span class="op">=</span> mordred_desc_df.values.astype(np.float64)</span></code></pre></div>
 <p>To summarize, the featureization process leverages multiple molecular descriptors to capture molecular structures’ complexity and diversity. Each descriptor contributes unique information about the molecule, resulting in a comprehensive and informative representation.</p>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col width="28%" />
 <col width="16%" />
-<col width="7%" />
-<col width="9%" />
-<col width="19%" />
-<col width="18%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1393,6 +1376,8 @@ div.csl-indent {
 </div>
 <div id="bio-graph-integrative-classifierregressor-biogicbiogir" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Bio-Graph Integrative Classifier/Regressor (BioGIC/BioGIR)<a href="methods.html#bio-graph-integrative-classifierregressor-biogicbiogir" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="classificationregression" class="section level4 hasAnchor" number="2.3.2.1">
+<h4><span class="header-section-number">2.3.2.1</span> Classification/Regression<a href="methods.html#classificationregression" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The Bio-Graph Integrative Classifier/Regressor (BioGIC/BioGIR) is envisioned as a model that assimilates information from the COVID-19 Bio-Graph, a complex network encapsulating different biological entities, such as chemical compounds, proteins, and pathways. This model performs classification or regression tasks based on the intricate relationships and interactions among these biological entities alongside the biological entities’ feature vectors.</p>
 <p>The COVID-19 Bio-Graph allows for a more comprehensive representation of interdependencies. The proposed BioGIC/BioGIR model aims to leverage this wealth of information combined with feature vectors that represent the relevant information about the nodes they represent. This is to predict the properties or behaviors of certain entities, such as identifying active chemical compounds.</p>
 <p>The BioGIC/BioGIR model architecture could be based upon a combination of different Graph Convolution Networks (GCNs). Graph Attention Network (GAT) convolution layer, is usually used for capturing the local neighborhood relationships of the nodes. GAT layer provides an attention mechanism allowing the model to weigh neighbor nodes differently based on their importance. Also, a sequence of Relational Graph Convolutional Network (RGCN) layers could be particularly beneficial for heterogeneous graphs, which are graphs with different types of nodes and edges. RGCN layers can learn separate weights for different types of edges, thereby modeling different types of relationships more accurately. GraphSAGE is another GCN that is a suitable general-purpose graph convolution operation and works reasonably well in many scenarios. It’s capable of generating embeddings for unseen data, which is an advantage if you expect to be working with active compounds that weren’t in your training data. However, it treats all neighbor nodes equally when aggregating their features, which might not be ideal in a heterogeneous graph where different types of nodes could have different importance.</p>
@@ -1474,6 +1459,121 @@ div.csl-indent {
 <span id="cb30-21"><a href="methods.html#cb30-21" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> to_hetero(model, data.metadata(), aggr<span class="op">=</span><span class="st">&#39;sum&#39;</span>)</span></code></pre></div>
 <p>It’s difficult to say definitively which approach is more effective in this case without empirical testing. Both approaches could work well, and their performance may vary depending on the specifics of the data and task. It could be beneficial to implement both approaches and conduct experiments to determine which works best for your specific use case.</p>
 </div>
+<div id="predicting-joint-effect-of-nodes-chemical-combination" class="section level4 hasAnchor" number="2.3.2.2">
+<h4><span class="header-section-number">2.3.2.2</span> Predicting joint effect of nodes (Chemical Combination)<a href="methods.html#predicting-joint-effect-of-nodes-chemical-combination" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The application of computational models to evaluate combination effects in chemical compounds represents a pioneering development in the field. An innovative approach entails the creation of ‘hypothetical combination nodes’, a concept rooted in manipulating the original dataset. Such nodes are formed by combining pairs of chemical compounds, specifically those with a PCA1 value ranging from 2.9 to 5. This PCA1 range is strategically chosen, considering that the compounds in this range are proximal to active compounds (compounds with PCA1 greater than 5); thus, they are more likely to exhibit biologically meaningful combinations. Besides, fewer chosen nodes in this range effectively reduce the computational burden by narrowing the search space for potential compound combinations from 25 million to 10 thousand.</p>
+<p>The augmented dataset effectively embeds an assumption about the combined effect of two compounds by constructing these nodes as a pairwise combination of chemical compounds and their features as the element-wise maximum of the two original node features. It assumes that the combination’s effect of a descriptor is at least as potent as the strongest of the two compounds in isolation. Also, the resulting combined fingerprint represents the presence of a particular substructure or property if it exists in either of the two original compounds. While not universally applicable, this assumption gives a pragmatic starting point for exploring synergistic effects.</p>
+<p>Moreover, the edges connected to these combination nodes represent the combined influence of the original chemical compounds. These are constructed as the union of edges connected to the original nodes, thereby encapsulating the joint relationships of the two compounds with proteins and pathways. This allows the model to capture more complex interaction patterns that may emerge from the compound combination, which single compound nodes may not capture. However, it is important to note that this approach may oversimplify the relationships, as it does not account for possible antagonistic effects, where the combination is less effective than one of the compounds alone. Despite this, the methodology provides a feasible mechanism for studying combination effects.</p>
+<p>Such a refined approach paves the way for a deeper understanding of compound effectiveness, revealing complex interplays that might be overlooked when considering compounds individually. Consequently, these insights could be leveraged to enhance our capabilities in drug repurposing and the design of combination therapies, thus expanding the horizons of computational pharmacology. Although these assumptions might not always be the case and oversimplify the relationships between these combination nodes, they provide a starting point, and the model can be further refined based on the results obtained.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="methods.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span>
+<span id="cb31-2"><a href="methods.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch_geometric.data <span class="im">import</span> HeteroData</span>
+<span id="cb31-3"><a href="methods.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm.notebook  <span class="im">import</span> tqdm</span>
+<span id="cb31-4"><a href="methods.html#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="methods.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define nodes to combine based on PCA1 value</span></span>
+<span id="cb31-6"><a href="methods.html#cb31-6" aria-hidden="true" tabindex="-1"></a>nodes_to_combine <span class="op">=</span> np.where((data[<span class="st">&#39;chemical&#39;</span>].pca1.numpy() <span class="op">&gt;=</span> <span class="fl">2.9</span>) <span class="op">&amp;</span> (data[<span class="st">&#39;chemical&#39;</span>].pca1.numpy() <span class="op">&lt;</span> <span class="dv">5</span>))[<span class="dv">0</span>].tolist()</span>
+<span id="cb31-7"><a href="methods.html#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="methods.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate all possible pairs of nodes to combine</span></span>
+<span id="cb31-9"><a href="methods.html#cb31-9" aria-hidden="true" tabindex="-1"></a>chemical_pairs <span class="op">=</span> itertools.combinations(nodes_to_combine, <span class="dv">2</span>)</span>
+<span id="cb31-10"><a href="methods.html#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="methods.html#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty list to store new features and names of combined nodes</span></span>
+<span id="cb31-12"><a href="methods.html#cb31-12" aria-hidden="true" tabindex="-1"></a>new_xs <span class="op">=</span> []</span>
+<span id="cb31-13"><a href="methods.html#cb31-13" aria-hidden="true" tabindex="-1"></a>combo_name <span class="op">=</span> []</span>
+<span id="cb31-14"><a href="methods.html#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="methods.html#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co"># For each pair of nodes, compute the element-wise maximum of their features and store the result</span></span>
+<span id="cb31-16"><a href="methods.html#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Also generate and store a name for the combined node</span></span>
+<span id="cb31-17"><a href="methods.html#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> id_1, id_2 <span class="kw">in</span> tqdm(chemical_pairs):</span>
+<span id="cb31-18"><a href="methods.html#cb31-18" aria-hidden="true" tabindex="-1"></a>    new_x <span class="op">=</span> np.maximum(feat[connected_compounds_idx][id_1], feat[connected_compounds_idx][id_1])</span>
+<span id="cb31-19"><a href="methods.html#cb31-19" aria-hidden="true" tabindex="-1"></a>    new_xs.append(new_x)</span>
+<span id="cb31-20"><a href="methods.html#cb31-20" aria-hidden="true" tabindex="-1"></a>    combo_name.append(<span class="ss">f&#39;</span><span class="sc">{</span>id_1<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>id_2<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb31-21"><a href="methods.html#cb31-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-22"><a href="methods.html#cb31-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate the names of the original and combined nodes</span></span>
+<span id="cb31-23"><a href="methods.html#cb31-23" aria-hidden="true" tabindex="-1"></a>combo_smiles <span class="op">=</span> chemical_smiles <span class="op">+</span> combo_name</span>
+<span id="cb31-24"><a href="methods.html#cb31-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-25"><a href="methods.html#cb31-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate the features of the original and combined nodes</span></span>
+<span id="cb31-26"><a href="methods.html#cb31-26" aria-hidden="true" tabindex="-1"></a>combo_chemical_features <span class="op">=</span> np.vstack((feat[connected_compounds_idx], np.vstack(new_xs)))</span>
+<span id="cb31-27"><a href="methods.html#cb31-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-28"><a href="methods.html#cb31-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Map each node to its connected nodes in the compound-protein and pathway-compound graphs</span></span>
+<span id="cb31-29"><a href="methods.html#cb31-29" aria-hidden="true" tabindex="-1"></a>comp_prot_dict <span class="op">=</span> {i: compound_protein_deges[compound_protein_deges[:, <span class="dv">0</span>] <span class="op">==</span> i, <span class="dv">1</span>] <span class="cf">for</span> i <span class="kw">in</span> np.unique(compound_protein_deges[:, <span class="dv">0</span>])}</span>
+<span id="cb31-30"><a href="methods.html#cb31-30" aria-hidden="true" tabindex="-1"></a>comp_pathway_dict <span class="op">=</span> {i: pathway_compound_edges[:, ::<span class="op">-</span><span class="dv">1</span>][pathway_compound_edges[:, ::<span class="op">-</span><span class="dv">1</span>][:, <span class="dv">0</span>] <span class="op">==</span> i, <span class="dv">1</span>] <span class="cf">for</span> i <span class="kw">in</span> np.unique(pathway_compound_edges[:, ::<span class="op">-</span><span class="dv">1</span>][:, <span class="dv">0</span>])}</span>
+<span id="cb31-31"><a href="methods.html#cb31-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-32"><a href="methods.html#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial index for combined nodes</span></span>
+<span id="cb31-33"><a href="methods.html#cb31-33" aria-hidden="true" tabindex="-1"></a>idx <span class="op">=</span> <span class="dv">4292</span></span>
+<span id="cb31-34"><a href="methods.html#cb31-34" aria-hidden="true" tabindex="-1"></a>p_l <span class="op">=</span> []</span>
+<span id="cb31-35"><a href="methods.html#cb31-35" aria-hidden="true" tabindex="-1"></a>w_l <span class="op">=</span> []</span>
+<span id="cb31-36"><a href="methods.html#cb31-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-37"><a href="methods.html#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Reinitialize chemical_pairs as it was exhausted in previous loop</span></span>
+<span id="cb31-38"><a href="methods.html#cb31-38" aria-hidden="true" tabindex="-1"></a>chemical_pairs <span class="op">=</span> itertools.combinations(nodes_to_combine, <span class="dv">2</span>)</span>
+<span id="cb31-39"><a href="methods.html#cb31-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-40"><a href="methods.html#cb31-40" aria-hidden="true" tabindex="-1"></a><span class="co"># For each pair of nodes, identify the proteins and pathways they are connected to</span></span>
+<span id="cb31-41"><a href="methods.html#cb31-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the connections of the combined node to proteins and pathways</span></span>
+<span id="cb31-42"><a href="methods.html#cb31-42" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> id_1, id_2 <span class="kw">in</span> tqdm(chemical_pairs):</span>
+<span id="cb31-43"><a href="methods.html#cb31-43" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb31-44"><a href="methods.html#cb31-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> id_1 <span class="kw">in</span> comp_prot_dict <span class="kw">and</span> id_2 <span class="kw">in</span> comp_prot_dict:</span>
+<span id="cb31-45"><a href="methods.html#cb31-45" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> np.union1d(comp_prot_dict[id_1], comp_prot_dict[id_2])</span>
+<span id="cb31-46"><a href="methods.html#cb31-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> id_1 <span class="kw">in</span> comp_prot_dict:</span>
+<span id="cb31-47"><a href="methods.html#cb31-47" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> comp_prot_dict[id_1]</span>
+<span id="cb31-48"><a href="methods.html#cb31-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> id_2 <span class="kw">in</span> comp_prot_dict:</span>
+<span id="cb31-49"><a href="methods.html#cb31-49" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> comp_prot_dict[id_2]</span>
+<span id="cb31-50"><a href="methods.html#cb31-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb31-51"><a href="methods.html#cb31-51" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> <span class="st">&#39;None&#39;</span></span>
+<span id="cb31-52"><a href="methods.html#cb31-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-53"><a href="methods.html#cb31-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> id_1 <span class="kw">in</span> comp_pathway_dict <span class="kw">and</span> id_2 <span class="kw">in</span> comp_pathway_dict:</span>
+<span id="cb31-54"><a href="methods.html#cb31-54" aria-hidden="true" tabindex="-1"></a>        w <span class="op">=</span> np.union1d(comp_pathway_dict[id_1], comp_pathway_dict[id_2])</span>
+<span id="cb31-55"><a href="methods.html#cb31-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> id_1 <span class="kw">in</span> comp_pathway_dict:</span>
+<span id="cb31-56"><a href="methods.html#cb31-56" aria-hidden="true" tabindex="-1"></a>        w <span class="op">=</span> comp_pathway_dict[id_1]</span>
+<span id="cb31-57"><a href="methods.html#cb31-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> id_2 <span class="kw">in</span> comp_pathway_dict:</span>
+<span id="cb31-58"><a href="methods.html#cb31-58" aria-hidden="true" tabindex="-1"></a>        w <span class="op">=</span> comp_pathway_dict[id_2]</span>
+<span id="cb31-59"><a href="methods.html#cb31-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb31-60"><a href="methods.html#cb31-60" aria-hidden="true" tabindex="-1"></a>        w <span class="op">=</span> <span class="st">&#39;None&#39;</span></span>
+<span id="cb31-61"><a href="methods.html#cb31-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-62"><a href="methods.html#cb31-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p <span class="op">!=</span> <span class="st">&#39;None&#39;</span>:</span>
+<span id="cb31-63"><a href="methods.html#cb31-63" aria-hidden="true" tabindex="-1"></a>        p_l.append(np.array([[idx, v] <span class="cf">for</span> v <span class="kw">in</span> p]))</span>
+<span id="cb31-64"><a href="methods.html#cb31-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> w <span class="op">!=</span> <span class="st">&#39;None&#39;</span>:</span>
+<span id="cb31-65"><a href="methods.html#cb31-65" aria-hidden="true" tabindex="-1"></a>        w_l.append(np.array([[idx, v] <span class="cf">for</span> v <span class="kw">in</span> w]))</span>
+<span id="cb31-66"><a href="methods.html#cb31-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-67"><a href="methods.html#cb31-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the connections of the combined nodes to the original graphs</span></span>
+<span id="cb31-68"><a href="methods.html#cb31-68" aria-hidden="true" tabindex="-1"></a>combo_pathway_compound_edges <span class="op">=</span> np.vstack((pathway_compound_edges, np.vstack(w_l)[:, ::<span class="op">-</span><span class="dv">1</span>]))</span>
+<span id="cb31-69"><a href="methods.html#cb31-69" aria-hidden="true" tabindex="-1"></a>combo_compound_protein_deges <span class="op">=</span> np.vstack((compound_protein_deges, np.vstack(p_l)))</span>
+<span id="cb31-70"><a href="methods.html#cb31-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-71"><a href="methods.html#cb31-71" aria-hidden="true" tabindex="-1"></a>combo_data <span class="op">=</span> HeteroData()</span>
+<span id="cb31-72"><a href="methods.html#cb31-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-73"><a href="methods.html#cb31-73" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>].x <span class="op">=</span> torch.tensor(combo_chemical_features, dtype<span class="op">=</span>torch.<span class="bu">float</span>)   <span class="co"># [num_chemicals, num_features_chemical]</span></span>
+<span id="cb31-74"><a href="methods.html#cb31-74" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>].smiles <span class="op">=</span> combo_smiles                                          <span class="co"># [num_chemicals]</span></span>
+<span id="cb31-75"><a href="methods.html#cb31-75" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>].y <span class="op">=</span> chemical_y.<span class="bu">long</span>()                                          <span class="co"># [num_chemicals]</span></span>
+<span id="cb31-76"><a href="methods.html#cb31-76" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>].pca1 <span class="op">=</span> chemical_pca1.to(torch.<span class="bu">float</span>)                           <span class="co"># [num_chemicals]</span></span>
+<span id="cb31-77"><a href="methods.html#cb31-77" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>].phenotype_feat <span class="op">=</span> chemical_phenotype_feat.to(torch.<span class="bu">float</span>)       <span class="co"># [num_chemicals, 16]</span></span>
+<span id="cb31-78"><a href="methods.html#cb31-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-79"><a href="methods.html#cb31-79" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f, v <span class="kw">in</span> [(<span class="st">&#39;train&#39;</span>, <span class="st">&#39;train&#39;</span>), (<span class="st">&#39;valid&#39;</span>, <span class="st">&#39;val&#39;</span>), (<span class="st">&#39;test&#39;</span>, <span class="st">&#39;test&#39;</span>)]:</span>
+<span id="cb31-80"><a href="methods.html#cb31-80" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> mask_df.select(</span>
+<span id="cb31-81"><a href="methods.html#cb31-81" aria-hidden="true" tabindex="-1"></a>                [<span class="st">&#39;connected_compound_gid&#39;</span>, <span class="st">&#39;mask&#39;</span>]</span>
+<span id="cb31-82"><a href="methods.html#cb31-82" aria-hidden="true" tabindex="-1"></a>                ).<span class="bu">filter</span>(</span>
+<span id="cb31-83"><a href="methods.html#cb31-83" aria-hidden="true" tabindex="-1"></a>                pl.col(<span class="st">&#39;mask&#39;</span>) <span class="op">==</span> f</span>
+<span id="cb31-84"><a href="methods.html#cb31-84" aria-hidden="true" tabindex="-1"></a>                ).select(<span class="st">&#39;connected_compound_gid&#39;</span>).to_numpy().flatten()</span>
+<span id="cb31-85"><a href="methods.html#cb31-85" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> torch.from_numpy(idx)</span>
+<span id="cb31-86"><a href="methods.html#cb31-86" aria-hidden="true" tabindex="-1"></a>    maskit <span class="op">=</span> torch.zeros(combo_data[<span class="st">&#39;chemical&#39;</span>].num_nodes, dtype<span class="op">=</span>torch.<span class="bu">bool</span>)</span>
+<span id="cb31-87"><a href="methods.html#cb31-87" aria-hidden="true" tabindex="-1"></a>    maskit[idx] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb31-88"><a href="methods.html#cb31-88" aria-hidden="true" tabindex="-1"></a>    combo_data[<span class="st">&#39;chemical&#39;</span>][<span class="ss">f&#39;</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">_mask&#39;</span>] <span class="op">=</span> maskit</span>
+<span id="cb31-89"><a href="methods.html#cb31-89" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-90"><a href="methods.html#cb31-90" aria-hidden="true" tabindex="-1"></a>combo_mask <span class="op">=</span> torch.zeros(combo_data[<span class="st">&#39;chemical&#39;</span>].num_nodes, dtype<span class="op">=</span>torch.<span class="bu">bool</span>)</span>
+<span id="cb31-91"><a href="methods.html#cb31-91" aria-hidden="true" tabindex="-1"></a>combo_mask[torch.from_numpy(np.arange(<span class="dv">4293</span>, <span class="dv">14163</span>, <span class="dv">1</span>))] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb31-92"><a href="methods.html#cb31-92" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>][<span class="ss">f&#39;combo_mask&#39;</span>] <span class="op">=</span> combo_mask</span>
+<span id="cb31-93"><a href="methods.html#cb31-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-94"><a href="methods.html#cb31-94" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;protein&#39;</span>].x <span class="op">=</span> protein_esm_embeddings.to(torch.<span class="bu">float</span>)  <span class="co"># [num_proteins, num_features_protein]</span></span>
+<span id="cb31-95"><a href="methods.html#cb31-95" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;protein&#39;</span>].name <span class="op">=</span> protein_names                        <span class="co"># [num_proteins]</span></span>
+<span id="cb31-96"><a href="methods.html#cb31-96" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;protein&#39;</span>].seq <span class="op">=</span> protein_sequences                     <span class="co"># [num_proteins]</span></span>
+<span id="cb31-97"><a href="methods.html#cb31-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-98"><a href="methods.html#cb31-98" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;pathway&#39;</span>].x <span class="op">=</span> pathway_features.to(torch.<span class="bu">float</span>)        <span class="co"># [num_pathways, num_features_pathway]</span></span>
+<span id="cb31-99"><a href="methods.html#cb31-99" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;pathway&#39;</span>].name <span class="op">=</span> pathway_names                        <span class="co"># [num_pathways]</span></span>
+<span id="cb31-100"><a href="methods.html#cb31-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-101"><a href="methods.html#cb31-101" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;chemical&#39;</span>, <span class="st">&#39;bind_to&#39;</span>, <span class="st">&#39;protein&#39;</span>].edge_index <span class="op">=</span> torch.from_numpy(combo_compound_protein_deges).t().contiguous() <span class="co"># [2, num_edges_bind]</span></span>
+<span id="cb31-102"><a href="methods.html#cb31-102" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;pathway&#39;</span>, <span class="st">&#39;activate_by&#39;</span>, <span class="st">&#39;chemical&#39;</span>].edge_index <span class="op">=</span> torch.from_numpy(combo_pathway_compound_edges).t().contiguous() <span class="co"># [2, num_edges_activate]</span></span>
+<span id="cb31-103"><a href="methods.html#cb31-103" aria-hidden="true" tabindex="-1"></a>combo_data[<span class="st">&#39;protein&#39;</span>, <span class="st">&#39;governs&#39;</span>, <span class="st">&#39;pathway&#39;</span>].edge_index <span class="op">=</span> torch.from_numpy(protein_pathway_edges).t().contiguous() <span class="co"># [2, num_edges_govern]</span></span></code></pre></div>
+<p>Additionally, the Louvain community detection algorithm, a method based on modularity optimization, offers a powerful alternative to the PCA1-based selection of compounds. Instead of naively selecting compounds based on PCA1 values, the Louvain algorithm can be used to detect communities or clusters within the complex network of compounds.</p>
+<p>The Louvain algorithm operates by grouping nodes into communities to maximize the number of within-community edges while minimizing the number of between-community edges. Through iterative optimization, the algorithm determines the network’s modularity, quantifying the density of edges within communities versus edges between communities. Therefore, the algorithm identifies clusters of compounds with greater connectivity than their neighbours.</p>
+<p>Applying the Louvain algorithm to the compound network offers several advantages. Firstly, it is a data-driven method without arbitrary thresholds, such as the PCA1 range of 2.9 to 5. Instead, it identifies natural clusters in the data, which may reveal hidden patterns that are not apparent when compounds are considered individually. Secondly, by grouping similar compounds, the algorithm reduces the complexity of the network, making it more manageable to analyze and interpret. Finally, the communities detected by the Louvain algorithm may correspond to groups of compounds with similar properties or effects, offering novel insights into the collective behaviour of compound combinations.</p>
+<p>In conclusion, the Louvain community detection algorithm provides a more sophisticated, data-driven approach to selecting compound combinations for further finding the best possible compounds for the combination study. Uncovering the compound network’s inherent structure can yield richer and more meaningful insights into compounds’ combined effects.</p>
+</div>
+</div>
 <div id="optimized-molecular-graph-generator-omg" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> Optimized Molecular Graph Generator (OMG)<a href="methods.html#optimized-molecular-graph-generator-omg" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are several approaches implemented for this goal. For instance, in SMILES-based Generative Models, the model uses SMILES notation as a textual representation for molecules to train the model and generate the new molecules. Several generative models, such as Recurrent Neural Networks (RNNs), Variational Autoencoders (VAEs) or Transformer models, have been developed with this procedure to generate SMILES strings that correspond to novel molecules. In this workflow, for example, VAEs can be used for molecule generation, where the molecule is usually represented as a SMILES string or a graph to be encoded into a latent space. New points in this latent space can be decoded into new molecules. The VAE can be trained to ensure that similar points in the latent space correspond to molecules with similar properties.</p>
@@ -1486,73 +1586,73 @@ div.csl-indent {
 <li><p>Fine-tuning with RL: The GCPN model, once pretrained, undergoes fine-tuning using reinforcement learning. The RL model sharpens its policy for generating molecules under the guidance of a reward function that assesses the chemical properties of the molecules. The generation of molecules with improved properties, such as enhanced drug-likeness, solubility, or synthetic accessibility, is the chief objective.</p></li>
 </ol>
 <p>In the pretraining phase, a model is trained on a large dataset. The purpose of this step is to learn general features and patterns from the data. Here, the Relational Graph Convolutional Network (RGCN) model is trained on the ZINC250k dataset. The model is trained for 500 epochs with a batch size of 96. After the pretraining phase, the model is saved for later use.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="methods.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
-<span id="cb31-2"><a href="methods.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> CovidMolGraph_TD <span class="im">import</span> CovidMolGraphTD_imbalance</span>
-<span id="cb31-3"><a href="methods.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchdrug <span class="im">import</span> datasets, data, utils, core, models, tasks</span>
-<span id="cb31-4"><a href="methods.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn, optim</span>
-<span id="cb31-5"><a href="methods.html#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-6"><a href="methods.html#cb31-6" aria-hidden="true" tabindex="-1"></a>torch.manual_seed(<span class="dv">42</span>)</span>
-<span id="cb31-7"><a href="methods.html#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-8"><a href="methods.html#cb31-8" aria-hidden="true" tabindex="-1"></a>dataset_zinc250k <span class="op">=</span> datasets.ZINC250k(<span class="st">&quot;./data/molecule-datasets/&quot;</span>, kekulize<span class="op">=</span><span class="va">True</span>, atom_feature<span class="op">=</span><span class="st">&quot;symbol&quot;</span>)</span>
-<span id="cb31-9"><a href="methods.html#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-10"><a href="methods.html#cb31-10" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> models.RGCN(input_dim<span class="op">=</span>dataset_zinc250k.node_feature_dim,</span>
-<span id="cb31-11"><a href="methods.html#cb31-11" aria-hidden="true" tabindex="-1"></a>                    num_relation<span class="op">=</span>dataset_zinc250k.num_bond_type,</span>
-<span id="cb31-12"><a href="methods.html#cb31-12" aria-hidden="true" tabindex="-1"></a>                    hidden_dims<span class="op">=</span>[<span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>], batch_norm<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb31-13"><a href="methods.html#cb31-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-14"><a href="methods.html#cb31-14" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> tasks.GCPNGeneration(model, dataset_zinc250k.atom_types, max_edge_unroll<span class="op">=</span><span class="dv">12</span>,</span>
-<span id="cb31-15"><a href="methods.html#cb31-15" aria-hidden="true" tabindex="-1"></a>                            max_node<span class="op">=</span><span class="dv">38</span>, criterion<span class="op">=</span><span class="st">&quot;nll&quot;</span>)</span>
-<span id="cb31-16"><a href="methods.html#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-17"><a href="methods.html#cb31-17" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.Adam(task.parameters(), lr <span class="op">=</span> <span class="fl">1e-3</span>)</span>
-<span id="cb31-18"><a href="methods.html#cb31-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-19"><a href="methods.html#cb31-19" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> core.Engine(task, dataset_zinc250k, <span class="va">None</span>, <span class="va">None</span>, optimizer,</span>
-<span id="cb31-20"><a href="methods.html#cb31-20" aria-hidden="true" tabindex="-1"></a>                     gpus<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], batch_size<span class="op">=</span><span class="dv">96</span>, log_interval<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb31-21"><a href="methods.html#cb31-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-22"><a href="methods.html#cb31-22" aria-hidden="true" tabindex="-1"></a>solver.train(num_epoch<span class="op">=</span><span class="dv">500</span>)</span>
-<span id="cb31-23"><a href="methods.html#cb31-23" aria-hidden="true" tabindex="-1"></a>solver.save(<span class="st">&quot;./data/gcpn_dataset_zinc250k_500epoch.pkl&quot;</span>)</span>
-<span id="cb31-24"><a href="methods.html#cb31-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-25"><a href="methods.html#cb31-25" aria-hidden="true" tabindex="-1"></a>dataset_covid <span class="op">=</span> CovidMolGraphTD_imbalance(<span class="st">&quot;./data/CovidMolGraphTD_imbalance&quot;</span>)</span>
-<span id="cb31-26"><a href="methods.html#cb31-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-27"><a href="methods.html#cb31-27" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> models.RGCN(input_dim<span class="op">=</span>dataset_covid.node_feature_dim,</span>
-<span id="cb31-28"><a href="methods.html#cb31-28" aria-hidden="true" tabindex="-1"></a>                    num_relation<span class="op">=</span>dataset_covid.num_bond_type,</span>
-<span id="cb31-29"><a href="methods.html#cb31-29" aria-hidden="true" tabindex="-1"></a>                    hidden_dims<span class="op">=</span>[<span class="dv">1024</span>, <span class="dv">1024</span>, <span class="dv">1024</span>, <span class="dv">1024</span>], batch_norm<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb31-30"><a href="methods.html#cb31-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-31"><a href="methods.html#cb31-31" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> tasks.GCPNGeneration(model, dataset_covid.atom_types, max_edge_unroll<span class="op">=</span><span class="dv">12</span>,</span>
-<span id="cb31-32"><a href="methods.html#cb31-32" aria-hidden="true" tabindex="-1"></a>                            max_node<span class="op">=</span><span class="dv">38</span>, criterion<span class="op">=</span><span class="st">&quot;nll&quot;</span>)</span>
-<span id="cb31-33"><a href="methods.html#cb31-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-34"><a href="methods.html#cb31-34" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.Adam(task.parameters(), lr <span class="op">=</span> <span class="fl">1e-3</span>)</span>
-<span id="cb31-35"><a href="methods.html#cb31-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-36"><a href="methods.html#cb31-36" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> core.Engine(task, dataset_covid, <span class="va">None</span>, <span class="va">None</span>, optimizer,</span>
-<span id="cb31-37"><a href="methods.html#cb31-37" aria-hidden="true" tabindex="-1"></a>                     gpus<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], batch_size<span class="op">=</span><span class="dv">128</span>, log_interval<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb31-38"><a href="methods.html#cb31-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-39"><a href="methods.html#cb31-39" aria-hidden="true" tabindex="-1"></a>solver.train(num_epoch<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb31-40"><a href="methods.html#cb31-40" aria-hidden="true" tabindex="-1"></a>solver.save(<span class="st">&quot;./data/gcpn_dataset_ncovid_1000epoch_batchnormalization_1024.pkl&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="methods.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb32-2"><a href="methods.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> CovidMolGraph_TD <span class="im">import</span> CovidMolGraphTD_imbalance</span>
+<span id="cb32-3"><a href="methods.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchdrug <span class="im">import</span> datasets, data, utils, core, models, tasks</span>
+<span id="cb32-4"><a href="methods.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn, optim</span>
+<span id="cb32-5"><a href="methods.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="methods.html#cb32-6" aria-hidden="true" tabindex="-1"></a>torch.manual_seed(<span class="dv">42</span>)</span>
+<span id="cb32-7"><a href="methods.html#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="methods.html#cb32-8" aria-hidden="true" tabindex="-1"></a>dataset_zinc250k <span class="op">=</span> datasets.ZINC250k(<span class="st">&quot;./data/molecule-datasets/&quot;</span>, kekulize<span class="op">=</span><span class="va">True</span>, atom_feature<span class="op">=</span><span class="st">&quot;symbol&quot;</span>)</span>
+<span id="cb32-9"><a href="methods.html#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-10"><a href="methods.html#cb32-10" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> models.RGCN(input_dim<span class="op">=</span>dataset_zinc250k.node_feature_dim,</span>
+<span id="cb32-11"><a href="methods.html#cb32-11" aria-hidden="true" tabindex="-1"></a>                    num_relation<span class="op">=</span>dataset_zinc250k.num_bond_type,</span>
+<span id="cb32-12"><a href="methods.html#cb32-12" aria-hidden="true" tabindex="-1"></a>                    hidden_dims<span class="op">=</span>[<span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>], batch_norm<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb32-13"><a href="methods.html#cb32-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-14"><a href="methods.html#cb32-14" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> tasks.GCPNGeneration(model, dataset_zinc250k.atom_types, max_edge_unroll<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb32-15"><a href="methods.html#cb32-15" aria-hidden="true" tabindex="-1"></a>                            max_node<span class="op">=</span><span class="dv">38</span>, criterion<span class="op">=</span><span class="st">&quot;nll&quot;</span>)</span>
+<span id="cb32-16"><a href="methods.html#cb32-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-17"><a href="methods.html#cb32-17" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.Adam(task.parameters(), lr <span class="op">=</span> <span class="fl">1e-3</span>)</span>
+<span id="cb32-18"><a href="methods.html#cb32-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-19"><a href="methods.html#cb32-19" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> core.Engine(task, dataset_zinc250k, <span class="va">None</span>, <span class="va">None</span>, optimizer,</span>
+<span id="cb32-20"><a href="methods.html#cb32-20" aria-hidden="true" tabindex="-1"></a>                     gpus<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], batch_size<span class="op">=</span><span class="dv">96</span>, log_interval<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb32-21"><a href="methods.html#cb32-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-22"><a href="methods.html#cb32-22" aria-hidden="true" tabindex="-1"></a>solver.train(num_epoch<span class="op">=</span><span class="dv">500</span>)</span>
+<span id="cb32-23"><a href="methods.html#cb32-23" aria-hidden="true" tabindex="-1"></a>solver.save(<span class="st">&quot;./data/gcpn_dataset_zinc250k_500epoch.pkl&quot;</span>)</span>
+<span id="cb32-24"><a href="methods.html#cb32-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-25"><a href="methods.html#cb32-25" aria-hidden="true" tabindex="-1"></a>dataset_covid <span class="op">=</span> CovidMolGraphTD_imbalance(<span class="st">&quot;./data/CovidMolGraphTD_imbalance&quot;</span>)</span>
+<span id="cb32-26"><a href="methods.html#cb32-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-27"><a href="methods.html#cb32-27" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> models.RGCN(input_dim<span class="op">=</span>dataset_covid.node_feature_dim,</span>
+<span id="cb32-28"><a href="methods.html#cb32-28" aria-hidden="true" tabindex="-1"></a>                    num_relation<span class="op">=</span>dataset_covid.num_bond_type,</span>
+<span id="cb32-29"><a href="methods.html#cb32-29" aria-hidden="true" tabindex="-1"></a>                    hidden_dims<span class="op">=</span>[<span class="dv">1024</span>, <span class="dv">1024</span>, <span class="dv">1024</span>, <span class="dv">1024</span>], batch_norm<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb32-30"><a href="methods.html#cb32-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-31"><a href="methods.html#cb32-31" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> tasks.GCPNGeneration(model, dataset_covid.atom_types, max_edge_unroll<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb32-32"><a href="methods.html#cb32-32" aria-hidden="true" tabindex="-1"></a>                            max_node<span class="op">=</span><span class="dv">38</span>, criterion<span class="op">=</span><span class="st">&quot;nll&quot;</span>)</span>
+<span id="cb32-33"><a href="methods.html#cb32-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-34"><a href="methods.html#cb32-34" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.Adam(task.parameters(), lr <span class="op">=</span> <span class="fl">1e-3</span>)</span>
+<span id="cb32-35"><a href="methods.html#cb32-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-36"><a href="methods.html#cb32-36" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> core.Engine(task, dataset_covid, <span class="va">None</span>, <span class="va">None</span>, optimizer,</span>
+<span id="cb32-37"><a href="methods.html#cb32-37" aria-hidden="true" tabindex="-1"></a>                     gpus<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], batch_size<span class="op">=</span><span class="dv">128</span>, log_interval<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb32-38"><a href="methods.html#cb32-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-39"><a href="methods.html#cb32-39" aria-hidden="true" tabindex="-1"></a>solver.train(num_epoch<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb32-40"><a href="methods.html#cb32-40" aria-hidden="true" tabindex="-1"></a>solver.save(<span class="st">&quot;./data/gcpn_dataset_ncovid_1000epoch_batchnormalization_1024.pkl&quot;</span>)</span></code></pre></div>
 <p>The next part of the experiment involves fine-tuning the pretrained model on a more specific task. This is where the model learns more task-specific patterns from a different dataset. In this case, the model is fine-tuned on a COVID-19 specific dataset using the Proximal Policy Optimization (PPO) algorithm, a reinforcement learning method. The learning rate is significantly lower than in the pretraining phase, indicating a more careful, incremental learning process. The model is trained for 100 epochs with a batch size of 16.</p>
 <p>Loading the pretrained model for fine-tuning is performed with the optimizer state not being loaded. This implies that while the model parameters are loaded from the pretrained model, the state of the optimizer (which could include momentum, adaptive learning rates, etc.) is reinitialized.</p>
 <p>Finally, the fine-tuned model is saved for further use or evaluation. The fine-tuned model is expected to perform better on the COVID-19 specific task than a model trained from scratch, thanks to the transfer of knowledge from the pretraining phase. This approach often reduces the amount of data required for the task-specific model and also shortens the training time.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="methods.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
-<span id="cb32-2"><a href="methods.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchdrug <span class="im">import</span> core, datasets, models, tasks</span>
-<span id="cb32-3"><a href="methods.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn, optim</span>
-<span id="cb32-4"><a href="methods.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> defaultdict</span>
-<span id="cb32-5"><a href="methods.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-6"><a href="methods.html#cb32-6" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> models.RGCN(input_dim<span class="op">=</span>dataset_covid.node_feature_dim,</span>
-<span id="cb32-7"><a href="methods.html#cb32-7" aria-hidden="true" tabindex="-1"></a>                    num_relation<span class="op">=</span>dataset_covid.num_bond_type,</span>
-<span id="cb32-8"><a href="methods.html#cb32-8" aria-hidden="true" tabindex="-1"></a>                    hidden_dims<span class="op">=</span>[<span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>], batch_norm<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb32-9"><a href="methods.html#cb32-9" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> tasks.GCPNGeneration(model, dataset_covid.atom_types,</span>
-<span id="cb32-10"><a href="methods.html#cb32-10" aria-hidden="true" tabindex="-1"></a>                            max_edge_unroll<span class="op">=</span><span class="dv">12</span>, max_node<span class="op">=</span><span class="dv">38</span>,</span>
-<span id="cb32-11"><a href="methods.html#cb32-11" aria-hidden="true" tabindex="-1"></a>                            task<span class="op">=</span>[<span class="st">&#39;pca1&#39;</span>], criterion<span class="op">=</span><span class="st">&quot;ppo&quot;</span>,</span>
-<span id="cb32-12"><a href="methods.html#cb32-12" aria-hidden="true" tabindex="-1"></a>                            reward_temperature<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb32-13"><a href="methods.html#cb32-13" aria-hidden="true" tabindex="-1"></a>                            agent_update_interval<span class="op">=</span><span class="dv">3</span>, gamma<span class="op">=</span><span class="fl">0.9</span>)</span>
-<span id="cb32-14"><a href="methods.html#cb32-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-15"><a href="methods.html#cb32-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-16"><a href="methods.html#cb32-16" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.Adam(task.parameters(), lr<span class="op">=</span><span class="fl">1e-5</span>)</span>
-<span id="cb32-17"><a href="methods.html#cb32-17" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> core.Engine(task, dataset_covid, <span class="va">None</span>, <span class="va">None</span>, optimizer,</span>
-<span id="cb32-18"><a href="methods.html#cb32-18" aria-hidden="true" tabindex="-1"></a>                     gpus<span class="op">=</span>(<span class="dv">0</span>,), batch_size<span class="op">=</span><span class="dv">16</span>, log_interval<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb32-19"><a href="methods.html#cb32-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-20"><a href="methods.html#cb32-20" aria-hidden="true" tabindex="-1"></a>solver.load(<span class="st">&quot;./data/gcpn_dataset_zinc250k_500epoch.pkl&quot;</span>,load_optimizer<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb32-21"><a href="methods.html#cb32-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-22"><a href="methods.html#cb32-22" aria-hidden="true" tabindex="-1"></a><span class="co"># RL finetuning</span></span>
-<span id="cb32-23"><a href="methods.html#cb32-23" aria-hidden="true" tabindex="-1"></a>solver.train(num_epoch<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb32-24"><a href="methods.html#cb32-24" aria-hidden="true" tabindex="-1"></a>solver.save(<span class="st">&quot;./data/gcpn_zinc250k_500epoch_finetune_covid_100epoch.pkl&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="methods.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb33-2"><a href="methods.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchdrug <span class="im">import</span> core, datasets, models, tasks</span>
+<span id="cb33-3"><a href="methods.html#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn, optim</span>
+<span id="cb33-4"><a href="methods.html#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> defaultdict</span>
+<span id="cb33-5"><a href="methods.html#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="methods.html#cb33-6" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> models.RGCN(input_dim<span class="op">=</span>dataset_covid.node_feature_dim,</span>
+<span id="cb33-7"><a href="methods.html#cb33-7" aria-hidden="true" tabindex="-1"></a>                    num_relation<span class="op">=</span>dataset_covid.num_bond_type,</span>
+<span id="cb33-8"><a href="methods.html#cb33-8" aria-hidden="true" tabindex="-1"></a>                    hidden_dims<span class="op">=</span>[<span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>], batch_norm<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb33-9"><a href="methods.html#cb33-9" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> tasks.GCPNGeneration(model, dataset_covid.atom_types,</span>
+<span id="cb33-10"><a href="methods.html#cb33-10" aria-hidden="true" tabindex="-1"></a>                            max_edge_unroll<span class="op">=</span><span class="dv">12</span>, max_node<span class="op">=</span><span class="dv">38</span>,</span>
+<span id="cb33-11"><a href="methods.html#cb33-11" aria-hidden="true" tabindex="-1"></a>                            task<span class="op">=</span>[<span class="st">&#39;pca1&#39;</span>], criterion<span class="op">=</span><span class="st">&quot;ppo&quot;</span>,</span>
+<span id="cb33-12"><a href="methods.html#cb33-12" aria-hidden="true" tabindex="-1"></a>                            reward_temperature<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb33-13"><a href="methods.html#cb33-13" aria-hidden="true" tabindex="-1"></a>                            agent_update_interval<span class="op">=</span><span class="dv">3</span>, gamma<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb33-14"><a href="methods.html#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-15"><a href="methods.html#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="methods.html#cb33-16" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.Adam(task.parameters(), lr<span class="op">=</span><span class="fl">1e-5</span>)</span>
+<span id="cb33-17"><a href="methods.html#cb33-17" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> core.Engine(task, dataset_covid, <span class="va">None</span>, <span class="va">None</span>, optimizer,</span>
+<span id="cb33-18"><a href="methods.html#cb33-18" aria-hidden="true" tabindex="-1"></a>                     gpus<span class="op">=</span>(<span class="dv">0</span>,), batch_size<span class="op">=</span><span class="dv">16</span>, log_interval<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb33-19"><a href="methods.html#cb33-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-20"><a href="methods.html#cb33-20" aria-hidden="true" tabindex="-1"></a>solver.load(<span class="st">&quot;./data/gcpn_dataset_zinc250k_500epoch.pkl&quot;</span>,load_optimizer<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb33-21"><a href="methods.html#cb33-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-22"><a href="methods.html#cb33-22" aria-hidden="true" tabindex="-1"></a><span class="co"># RL finetuning</span></span>
+<span id="cb33-23"><a href="methods.html#cb33-23" aria-hidden="true" tabindex="-1"></a>solver.train(num_epoch<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb33-24"><a href="methods.html#cb33-24" aria-hidden="true" tabindex="-1"></a>solver.save(<span class="st">&quot;./data/gcpn_zinc250k_500epoch_finetune_covid_100epoch.pkl&quot;</span>)</span></code></pre></div>
 <p>GraphAF, however, sequentially generates molecules atom by atom and bond by bond. This approach is rooted in the concept of normalizing flows in deep learning. It employs an invertible mapping between the types of nodes (atoms) and edges (bonds) in the molecular graph and a noise distribution. The main components of GraphAF include:</p>
 <ol style="list-style-type: decimal">
 <li><p>Relational Graph Convolutional Networks (RGCN): The RGCN serves as the graph representation model in GraphAF. It is a variant of GCN designed to handle graphs with varied relations or edges. In molecular terms, diverse types of edges can represent different chemical bonds.By utilizing an RGCN, GraphAF can learn a more expressive representation of the molecular graph that considers the types of bonds.</p></li>
@@ -1560,13 +1660,13 @@ div.csl-indent {
 <li><p>Node Flow Model and Edge Flow Model: These components, integral to the autoregressive generation task, define an invertible mapping between the types of nodes and edges in the molecular graph and noise distribution. By implementing a node flow model and an edge flow model, GraphAF can generate a diverse set of molecules.</p></li>
 </ol>
 </div>
-<div id="model-enhancement-ensembling-and-self-supervised-learning" class="section level3 hasAnchor" number="2.3.4">
-<h3><span class="header-section-number">2.3.4</span> Model Enhancement: Ensembling and Self-Supervised Learning<a href="methods.html#model-enhancement-ensembling-and-self-supervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="model-enhancement-ensembling-and-self-supervised-learning" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Model Enhancement: Ensembling and Self-Supervised Learning<a href="methods.html#model-enhancement-ensembling-and-self-supervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In machine learning, combining multiple models is one approach to making better predictions or decisions. The idea behind this method is that combining multiple models can lead to improved performance and more accurate results, as each model in the ensemble can capture different aspects of the underlying patterns in the data. In applying an ensemble approach to the BioGIC/BioGIR and GLMP models, the integration of GLMP’s latent embedding for node representation instead of the traditional feature vectors could enhance the performance of the BioGIC/BioGIR model. The reason is that the latent embeddings from the GLMP model encapsulate more relevant and nuanced information about the molecular structures in accordance with the task, and this may not be readily captured by simple feature vectors. As a result, the BioGIC/BioGIR model could benefit from this enriched representation, leading to a potentially more accurate classification or regression of biological entities. The ensemble approach, therefore, facilitates the incorporation of diverse perspectives and varied modelling of data patterns, thus potentially resulting in improved overall model performance.</p>
 <p>Another way to improve the performance of models is self-supervised learning. It is a method where models generate their labels from the input data and has become a powerful tool in predicting drug properties and molecule generation. Techniques such as InfoGraph operate on graph-structured data and maximize the mutual information between node-level and graph-level representations. Once trained, these models can generate meaningful representations of new graphs or nodes, proving useful in tasks like node classification, link prediction, or graph classification. In the context of our model, this method can be employed to improve GLMP (Graph-Level Molecular Predictor) model, where molecular properties identify potential drug candidates. Our generative model, OMG (Optimized Molecular Graph Generator), has already been utilized it with training the Relational Graph Convolutional Network (RGCN) model on the ZINC250k dataset.</p>
 <p>In the Optimized Molecular Graph Generator (OMG) model, incorporating the Graph-Level Molecular Predictor (GLMP) model plays a critical role in refining the generation process. By using the GLMP model, the OMG model’s reinforcement learning (RL) framework can effectively characterize and evaluate generated molecules based on their PCA1 value, a significant descriptor of molecular properties. This interaction allows for a more goal-oriented generation of molecules, driving the model towards creating molecules that optimize the targeted PCA1 value. Consequently, improvements made to the GLMP model directly influence the efficacy of the OMG model. Enhancements in GLMP’s ability to accurately predict molecular properties lead to more precise evaluations in the RL framework, thereby fostering the generation of higher-quality molecules. The symbiotic relationship between the OMG and GLMP models underscores the importance of improving the GLMP model, as it serves as a foundational component in achieving optimal molecule generation.</p>
 
-</div>
 </div>
 </div>
             </section>
