@@ -21,5 +21,6 @@ models
 graph-level-molecular-predictor-glmp
 bio-graph-integrative-classifierregressor-biogicbiogir
 optimized-molecular-graph-generator-omg
+model-enhancement-ensembling-and-self-supervised-learning
 results
 about-bookdown
