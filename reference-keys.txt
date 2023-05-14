@@ -20,6 +20,8 @@ representing-chemical-molecules-as-graph
 models
 graph-level-molecular-predictor-glmp
 bio-graph-integrative-classifierregressor-biogicbiogir
+classificationregression
+predicting-joint-effect-of-nodes-chemical-combination
 optimized-molecular-graph-generator-omg
 model-enhancement-ensembling-and-self-supervised-learning
 results
