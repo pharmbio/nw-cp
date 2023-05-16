@@ -2,7 +2,6 @@ intro
 graphs
 graph-representation-learning
 cell-profiling
-why-graph-representation-learning
 methods
 data-acquisition-softwares-and-libraries
 data-preprocessing
@@ -25,4 +24,3 @@ predicting-joint-effect-of-nodes-chemical-combination
 optimized-molecular-graph-generator-omg
 model-enhancement-ensembling-and-self-supervised-learning
 results
-about-bookdown
