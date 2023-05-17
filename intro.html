@@ -23,7 +23,7 @@
 <meta name="author" content="Nima Chamyani" />
 
 
-<meta name="date" content="2023-05-16" />
+<meta name="date" content="2023-05-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -220,14 +220,14 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="intro" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In recent years, graph representation learning and cell profiling have emerged as potent tools in understanding biological systems and identifying novel therapeutic strategies <span class="citation">(<a href="#ref-li2021graph" role="doc-biblioref">Li, Huang, and Zitnik 2021</a>, <a href="#ref-li2022graph" role="doc-biblioref">2022</a>; <a href="#ref-xiong2023graph" role="doc-biblioref">Xiong, Zhou, and Wang 2023</a>; <a href="#ref-aulner2019next" role="doc-biblioref">Aulner et al. 2019</a>; <a href="#ref-swinney2020recent" role="doc-biblioref">Swinney and Lee 2020</a>)</span>. By amalgamating these state-of-the-art technologies, we can harness the rich, high-dimensional data within the framework of network medicine, providing crucial insights into the relationships amongst chemical compounds, diseases, proteins, and genes. This research focuses on the applicability of graph representation learning in analyzing cell profiling data to uncover latent correlations instrumental in propelling drug discovery.</p>
-<p>The concept of graphs or networks has become a cornerstone in biomedical research, providing a platform to represent complex biological systems and associations <span class="citation">(<a href="#ref-barabasi2011network" role="doc-biblioref">Barabási, Gulbahce, and Loscalzo 2011</a>; <a href="#ref-piro2012network" role="doc-biblioref">Piro 2012</a>)</span>. They can encapsulate the intricate relationships among various entities, such as molecular interactions, protein-protein relations, and gene-disease connections. The vast expanse of biological data and associations they hold make them a compelling platform for applying deep learning techniques, specifically graph representation learning. The potential of graphs extends beyond the realm of biology, as they allow the extrapolation of insights from other complex networks, such as the World Wide Web and social sciences <span class="citation">(<a href="#ref-li2022graph" role="doc-biblioref">Li, Huang, and Zitnik 2022</a>)</span>.</p>
-<p>Graphs map out different biological entities to a set of nodes and links, with nodes representing components of a biological system and links signifying the interactions between these components. To effectively understand these networks, graph representation learning has emerged as a powerful approach <span class="citation">(<a href="#ref-yi2022graph" role="doc-biblioref">Yi et al. 2022</a>; <a href="#ref-feng2022prediction" role="doc-biblioref">Feng and Zhang 2022</a>)</span>. It involves the transformation of nodes and edges into a lower vectorial space, known as embedding. Once the complex structure of the graph is transposed into this lower space, various machine-learning techniques can be applied to the data.</p>
-<p>The application of graph representation learning in biomedical research has seen substantial progress in recent years. Machine learning algorithms, such as graph neural networks (GNNs), have been developed for various applications, including molecular interactions and recommendation systems. These techniques have shown significant promise in biological and biomedical data, predicting protein-protein interactions, understanding gene-disease associations, and discovering new drug targets <span class="citation">(<a href="#ref-pawson2008network" role="doc-biblioref">Pawson and Linding 2008</a>)</span>.</p>
-<p>Cell profiling, on the other hand, has emerged as a complementary strategy that provides a high-resolution view of biological systems at a cellular level. It involves the comprehensive analysis of cells in terms of their physiological, morphological, and molecular characteristics, allowing for the identification of phenotypic changes associated with disease states or drug responses. By producing high-dimensional data, cell profiling captures the complexity of cellular behaviours and responses, paving the way for discovering novel biomarkers and therapeutic targets <span class="citation">(<a href="#ref-caicedo2017data" role="doc-biblioref">Caicedo et al. 2017</a>)</span>.</p>
+<p>In recent years, graph representation learning and cell profiling have emerged as potent tools in understanding biological systems and identifying novel therapeutic strategies <span class="citation"><a href="#ref-li2021graph" role="doc-biblioref">[1]</a>–<a href="#ref-swinney2020recent" role="doc-biblioref">[5]</a></span>. By amalgamating these state-of-the-art technologies, we can harness the rich, high-dimensional data within the framework of network medicine, providing crucial insights into the relationships amongst chemical compounds, diseases, proteins, and genes. This research focuses on the applicability of graph representation learning in analyzing cell profiling data to uncover latent correlations instrumental in propelling drug discovery.</p>
+<p>The concept of graphs or networks has become a cornerstone in biomedical research, providing a platform to represent complex biological systems and associations <span class="citation"><a href="#ref-barabasi2011network" role="doc-biblioref">[6]</a>, <a href="#ref-piro2012network" role="doc-biblioref">[7]</a></span>. They can encapsulate the intricate relationships among various entities, such as molecular interactions, protein-protein relations, and gene-disease connections. The vast expanse of biological data and associations they hold make them a compelling platform for applying deep learning techniques, specifically graph representation learning. The potential of graphs extends beyond the realm of biology, as they allow the extrapolation of insights from other complex networks, such as the World Wide Web and social sciences <span class="citation"><a href="#ref-li2022graph" role="doc-biblioref">[2]</a></span>.</p>
+<p>Graphs map out different biological entities to a set of nodes and links, with nodes representing components of a biological system and links signifying the interactions between these components. To effectively understand these networks, graph representation learning has emerged as a powerful approach <span class="citation"><a href="#ref-yi2022graph" role="doc-biblioref">[8]</a>, <a href="#ref-feng2022prediction" role="doc-biblioref">[9]</a></span>. It involves the transformation of nodes and edges into a lower vectorial space, known as embedding. Once the complex structure of the graph is transposed into this lower space, various machine-learning techniques can be applied to the data.</p>
+<p>The application of graph representation learning in biomedical research has seen substantial progress in recent years. Machine learning algorithms, such as graph neural networks (GNNs), have been developed for various applications, including molecular interactions and recommendation systems. These techniques have shown significant promise in biological and biomedical data, predicting protein-protein interactions, understanding gene-disease associations, and discovering new drug targets <span class="citation"><a href="#ref-pawson2008network" role="doc-biblioref">[10]</a></span>.</p>
+<p>Cell profiling, on the other hand, has emerged as a complementary strategy that provides a high-resolution view of biological systems at a cellular level. It involves the comprehensive analysis of cells in terms of their physiological, morphological, and molecular characteristics, allowing for the identification of phenotypic changes associated with disease states or drug responses. By producing high-dimensional data, cell profiling captures the complexity of cellular behaviours and responses, paving the way for discovering novel biomarkers and therapeutic targets <span class="citation"><a href="#ref-caicedo2017data" role="doc-biblioref">[11]</a></span>.</p>
 <div id="graphs" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Graphs<a href="intro.html#graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Networks, represented as graphs, can describe many biological entities and associations, making them highly effective tools in biomedical research. Graphs can represent components of a biological system as nodes or vertices and the interactions or relations between these components as links or edges. Graphs can be categorized into several models, such as scale-free, random, and hierarchical networks, each with distinct architectural features. These models can be mathematically analyzed through their topology and dynamics, with size-dependent descriptors such as the degree, path length, and clustering coefficient quantifying their connectivity, navigability, and local interconnectedness, respectively <span class="citation">(<a href="#ref-barabasi2011network" role="doc-biblioref">Barabási, Gulbahce, and Loscalzo 2011</a>)</span>.</p>
+<p>Networks, represented as graphs, can describe many biological entities and associations, making them highly effective tools in biomedical research. Graphs can represent components of a biological system as nodes or vertices and the interactions or relations between these components as links or edges. Graphs can be categorized into several models, such as scale-free, random, and hierarchical networks, each with distinct architectural features. These models can be mathematically analyzed through their topology and dynamics, with size-dependent descriptors such as the degree, path length, and clustering coefficient quantifying their connectivity, navigability, and local interconnectedness, respectively <span class="citation"><a href="#ref-barabasi2011network" role="doc-biblioref">[6]</a></span>.</p>
 <div style="text-align: center;">
 <figure>
 <img src="assets/network-basics.svg"
@@ -242,7 +242,7 @@ div.csl-indent {
 </div>
 <div id="graph-representation-learning" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Graph representation learning<a href="intro.html#graph-representation-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Graph representation learning, a powerful approach for understanding and extracting meaningful information from complex networks, has gained prominence recently. This paradigm is beneficial for various downstream tasks such as node classification, link prediction, and graph classification, which require learning and encoding graph data’s inherent structure and features <span class="citation">(<a href="#ref-chen2020graph" role="doc-biblioref">Chen et al. 2020</a>)</span>.</p>
+<p>Graph representation learning, a powerful approach for understanding and extracting meaningful information from complex networks, has gained prominence recently. This paradigm is beneficial for various downstream tasks such as node classification, link prediction, and graph classification, which require learning and encoding graph data’s inherent structure and features <span class="citation"><a href="#ref-chen2020graph" role="doc-biblioref">[12]</a></span>.</p>
 <div style="text-align: center;">
 <figure>
 <iframe src="assets/network-basics.html" width="95%" height="550px" alt="Graph basics" id="graph-basics2">
@@ -252,10 +252,10 @@ div.csl-indent {
 </figcaption>
 </figure>
 </div>
-<p>Graph embedding methods are central to graph representation learning. These methods aim to represent nodes, edges, or entire graphs as continuous low-dimensional vectors while preserving the underlying graph structure. This process allows applying different types of machine-learning techniques on the data. Both unsupervised and supervised learning paradigms have been employed in deriving these embeddings. Unsupervised methods such as DeepWalk <span class="citation">(<a href="#ref-perozzi2014deepwalk" role="doc-biblioref">Perozzi, Al-Rfou, and Skiena 2014</a>)</span> and node2vec <span class="citation">(<a href="#ref-grover2016node2vec" role="doc-biblioref">Grover and Leskovec 2016</a>)</span> utilize graph connectivity patterns to learn latent feature representations, while supervised methods like GraphSAGE <span class="citation">(<a href="#ref-lo2022graphsage" role="doc-biblioref">Lo et al. 2022</a>)</span> and Graph Convolutional Networks (GCN) employ node features and labels to guide the learning process <span class="citation">(<a href="#ref-hamilton2017representation" role="doc-biblioref">Hamilton, Ying, and Leskovec 2017</a>; <a href="#ref-berg2017graph" role="doc-biblioref">Berg, Kipf, and Welling 2017</a>)</span>.</p>
-<p>Recent developments in the field of graph neural networks (GNNs) have introduced sophisticated message-passing techniques, such as those employed by the GraphSAGE and MPNN (Message Passing Neural Network) frameworks <span class="citation">(<a href="#ref-gilmer2017neural" role="doc-biblioref">Gilmer et al. 2017</a>)</span>. These techniques provide a powerful way to learn node and edge representations by propagating and aggregating information from local neighborhoods. Moreover, they have been extended to non-Euclidean domains with frameworks like ChebyNet, GAT, and Recurrent Multi-Graph Neural Networks, enabling the capture of the intrinsic geometry and topology of the graph <span class="citation">(<a href="#ref-defferrard2016convolutional" role="doc-biblioref">Defferrard, Bresson, and Vandergheynst 2016</a>; <a href="#ref-velivckovic2017graph" role="doc-biblioref">Veličković et al. 2017</a>; <a href="#ref-monti2017geometric" role="doc-biblioref">Monti, Bronstein, and Bresson 2017</a>)</span>.</p>
-<p>In the domain of autoencoders, developments like SDNE, DNGR, and VGAE have shown effectiveness in learning low-dimensional embeddings from the graph’s structure without supervision <span class="citation">(<a href="#ref-wang2016text" role="doc-biblioref">Wang et al. 2016</a>; <a href="#ref-kipf2016semi" role="doc-biblioref">Kipf and Welling 2016</a>; <a href="#ref-cao2016deep" role="doc-biblioref">Cao, Lu, and Xu 2016</a>)</span>. These models often employ techniques such as matrix factorization and skip-gram models to reconstruct the original graph from the learned embeddings. Furthermore, autoencoders can be combined with graph regularization and various learning methods, such as Isomap, MDS, and LLE, to improve the quality of the learned representations further <span class="citation">(<a href="#ref-majumdar2018graph" role="doc-biblioref">Majumdar 2018</a>; <a href="#ref-bernstein2000graph" role="doc-biblioref">Bernstein et al. 2000</a>; <a href="#ref-qu2021supervised" role="doc-biblioref">Qu et al. 2021</a>)</span>.</p>
-<p>Graph generation models like GCPN <span class="citation">(<a href="#ref-shi2020graphaf" role="doc-biblioref">Shi et al. 2020</a>)</span>, JT-VAE <span class="citation">(<a href="#ref-jin2018junction" role="doc-biblioref">Jin, Barzilay, and Jaakkola 2018</a>)</span>, and GraphRNN <span class="citation">(<a href="#ref-you2018graphrnn" role="doc-biblioref">You et al. 2018</a>)</span> have also been developed for generating graphs with desirable properties or learning latent graph spaces. In applications like drug discovery, these models can be particularly effective for generating new chemical structures with specific characteristics.</p>
+<p>Graph embedding methods are central to graph representation learning. These methods aim to represent nodes, edges, or entire graphs as continuous low-dimensional vectors while preserving the underlying graph structure. This process allows applying different types of machine-learning techniques on the data. Both unsupervised and supervised learning paradigms have been employed in deriving these embeddings. Unsupervised methods such as DeepWalk <span class="citation"><a href="#ref-perozzi2014deepwalk" role="doc-biblioref">[13]</a></span> and node2vec <span class="citation"><a href="#ref-grover2016node2vec" role="doc-biblioref">[14]</a></span> utilize graph connectivity patterns to learn latent feature representations, while supervised methods like GraphSAGE <span class="citation"><a href="#ref-lo2022graphsage" role="doc-biblioref">[15]</a></span> and Graph Convolutional Networks (GCN) employ node features and labels to guide the learning process <span class="citation"><a href="#ref-hamilton2017representation" role="doc-biblioref">[16]</a>, <a href="#ref-berg2017graph" role="doc-biblioref">[17]</a></span>.</p>
+<p>Recent developments in the field of graph neural networks (GNNs) have introduced sophisticated message-passing techniques, such as those employed by the GraphSAGE and MPNN (Message Passing Neural Network) frameworks <span class="citation"><a href="#ref-gilmer2017neural" role="doc-biblioref">[18]</a></span>. These techniques provide a powerful way to learn node and edge representations by propagating and aggregating information from local neighborhoods. Moreover, they have been extended to non-Euclidean domains with frameworks like ChebyNet, GAT, and Recurrent Multi-Graph Neural Networks, enabling the capture of the intrinsic geometry and topology of the graph <span class="citation"><a href="#ref-defferrard2016convolutional" role="doc-biblioref">[19]</a>–<a href="#ref-monti2017geometric" role="doc-biblioref">[21]</a></span>.</p>
+<p>In the domain of autoencoders, developments like SDNE, DNGR, and VGAE have shown effectiveness in learning low-dimensional embeddings from the graph’s structure without supervision <span class="citation"><a href="#ref-wang2016text" role="doc-biblioref">[22]</a>–<a href="#ref-cao2016deep" role="doc-biblioref">[24]</a></span>. These models often employ techniques such as matrix factorization and skip-gram models to reconstruct the original graph from the learned embeddings. Furthermore, autoencoders can be combined with graph regularization and various learning methods, such as Isomap, MDS, and LLE, to improve the quality of the learned representations further <span class="citation"><a href="#ref-majumdar2018graph" role="doc-biblioref">[25]</a>–<a href="#ref-qu2021supervised" role="doc-biblioref">[27]</a></span>.</p>
+<p>Graph generation models like GCPN <span class="citation"><a href="#ref-shi2020graphaf" role="doc-biblioref">[28]</a></span>, JT-VAE <span class="citation"><a href="#ref-jin2018junction" role="doc-biblioref">[29]</a></span>, and GraphRNN <span class="citation"><a href="#ref-you2018graphrnn" role="doc-biblioref">[30]</a></span> have also been developed for generating graphs with desirable properties or learning latent graph spaces. In applications like drug discovery, these models can be particularly effective for generating new chemical structures with specific characteristics.</p>
 <div style="text-align: center;">
 <figure>
 <iframe src="assets/network-representation-learning.html" width="95%" height="550px" alt="Graph representation learning" id="graph-representation">
@@ -271,115 +271,100 @@ div.csl-indent {
 </div>
 <div id="cell-profiling" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Cell profiling<a href="intro.html#cell-profiling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Cell profiling is a powerful method employed in drug discovery, involving analyzing cellular changes induced by various compounds. This approach leverages high-content microscopy imaging techniques like Cell Painting, where cells stained with multiplexed dyes are used to observe the effects of different substances <span class="citation">(<a href="#ref-rietdijk2022morphological" role="doc-biblioref">Rietdijk et al. 2022</a>)</span>.</p>
-<p>Machine learning (ML) plays an instrumental role in cell profiling. It assists in deciphering the multidimensional profiles generated from image-based features, enabling researchers to identify relevant patterns and biological activity crucial for drug discovery <span class="citation">(<a href="#ref-tian2023combining" role="doc-biblioref">Tian et al. 2023</a>; <a href="#ref-mullard2019machine" role="doc-biblioref">Mullard 2019</a>)</span>. Recent advancements have seen the incorporation of ML in image-based profiling, fostering an understanding of disease mechanisms, predicting drug activity and toxicity, and elucidating the mechanisms of action <span class="citation">(<a href="#ref-SCHEEDER201843" role="doc-biblioref">Scheeder, Heigwer, and Boutros 2018</a>)</span>.</p>
+<p>Cell profiling is a powerful method employed in drug discovery, involving analyzing cellular changes induced by various compounds. This approach leverages high-content microscopy imaging techniques like Cell Painting, where cells stained with multiplexed dyes are used to observe the effects of different substances <span class="citation"><a href="#ref-rietdijk2022morphological" role="doc-biblioref">[31]</a></span>.</p>
+<p>Machine learning (ML) plays an instrumental role in cell profiling. It assists in deciphering the multidimensional profiles generated from image-based features, enabling researchers to identify relevant patterns and biological activity crucial for drug discovery <span class="citation"><a href="#ref-tian2023combining" role="doc-biblioref">[32]</a>, <a href="#ref-mullard2019machine" role="doc-biblioref">[33]</a></span>. Recent advancements have seen the incorporation of ML in image-based profiling, fostering an understanding of disease mechanisms, predicting drug activity and toxicity, and elucidating the mechanisms of action <span class="citation"><a href="#ref-SCHEEDER201843" role="doc-biblioref">[34]</a></span>.</p>
 <p>Graph representation learning is particularly promising in this context. It excels at capturing the intricate relationships between various entities, such as proteins or compounds, and their interactions, which is pertinent in cell profiling. This technique can deal with diverse data types and incorporate rich information for a comprehensive understanding of the underlying relationships, making it a compelling choice for improving the efficiency and accuracy of drug discovery processes.</p>
 
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-aulner2019next" class="csl-entry">
-Aulner, Nathalie, Anne Danckaert, JongEun Ihm, David Shum, and Spencer L Shorte. 2019. <span>“Next-Generation Phenotypic Screening in Early Drug Discovery for Infectious Diseases.”</span> <em>Trends in Parasitology</em> 35 (7): 559–70.
-</div>
-<div id="ref-barabasi2011network" class="csl-entry">
-Barabási, Albert-László, Natali Gulbahce, and Joseph Loscalzo. 2011. <span>“Network Medicine: A Network-Based Approach to Human Disease.”</span> <em>Nature Reviews Genetics</em> 12 (1): 56–68.
-</div>
-<div id="ref-berg2017graph" class="csl-entry">
-Berg, Rianne van den, Thomas N Kipf, and Max Welling. 2017. <span>“Graph Convolutional Matrix Completion.”</span> <em>arXiv Preprint arXiv:1706.02263</em>.
-</div>
-<div id="ref-bernstein2000graph" class="csl-entry">
-Bernstein, Mira, Vin De Silva, John C Langford, and Joshua B Tenenbaum. 2000. <span>“Graph Approximations to Geodesics on Embedded Manifolds.”</span> Citeseer.
-</div>
-<div id="ref-caicedo2017data" class="csl-entry">
-Caicedo, Juan C, Sam Cooper, Florian Heigwer, Scott Warchal, Peng Qiu, Csaba Molnar, Aliaksei S Vasilevich, et al. 2017. <span>“Data-Analysis Strategies for Image-Based Cell Profiling.”</span> <em>Nature Methods</em> 14 (9): 849–63.
-</div>
-<div id="ref-cao2016deep" class="csl-entry">
-Cao, Shaosheng, Wei Lu, and Qiongkai Xu. 2016. <span>“Deep Neural Networks for Learning Graph Representations.”</span> In <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>. Vol. 30. 1.
-</div>
-<div id="ref-chen2020graph" class="csl-entry">
-Chen, Fenxiao, Yun-Cheng Wang, Bin Wang, and C-C Jay Kuo. 2020. <span>“Graph Representation Learning: A Survey.”</span> <em>APSIPA Transactions on Signal and Information Processing</em> 9: e15.
-</div>
-<div id="ref-defferrard2016convolutional" class="csl-entry">
-Defferrard, Michaël, Xavier Bresson, and Pierre Vandergheynst. 2016. <span>“Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering.”</span> <em>Advances in Neural Information Processing Systems</em> 29.
-</div>
-<div id="ref-feng2022prediction" class="csl-entry">
-Feng, Yue-Hua, and Shao-Wu Zhang. 2022. <span>“Prediction of Drug-Drug Interaction Using an Attention-Based Graph Neural Network on Drug Molecular Graphs.”</span> <em>Molecules</em> 27 (9): 3004.
-</div>
-<div id="ref-gilmer2017neural" class="csl-entry">
-Gilmer, Justin, Samuel S Schoenholz, Patrick F Riley, Oriol Vinyals, and George E Dahl. 2017. <span>“Neural Message Passing for Quantum Chemistry.”</span> In <em>International Conference on Machine Learning</em>, 1263–72. PMLR.
-</div>
-<div id="ref-grover2016node2vec" class="csl-entry">
-Grover, Aditya, and Jure Leskovec. 2016. <span>“Node2vec: Scalable Feature Learning for Networks.”</span> In <em>Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 855–64.
-</div>
-<div id="ref-hamilton2017representation" class="csl-entry">
-Hamilton, William L, Rex Ying, and Jure Leskovec. 2017. <span>“Representation Learning on Graphs: Methods and Applications.”</span> <em>arXiv Preprint arXiv:1709.05584</em>.
-</div>
-<div id="ref-jin2018junction" class="csl-entry">
-Jin, Wengong, Regina Barzilay, and Tommi Jaakkola. 2018. <span>“Junction Tree Variational Autoencoder for Molecular Graph Generation.”</span> In <em>International Conference on Machine Learning</em>, 2323–32. PMLR.
-</div>
-<div id="ref-kipf2016semi" class="csl-entry">
-Kipf, Thomas N, and Max Welling. 2016. <span>“Semi-Supervised Classification with Graph Convolutional Networks.”</span> <em>arXiv Preprint arXiv:1609.02907</em>.
-</div>
+<div id="refs" class="references csl-bib-body">
 <div id="ref-li2021graph" class="csl-entry">
-Li, Michelle M, Kexin Huang, and Marinka Zitnik. 2021. <span>“Graph Representation Learning in Biomedicine.”</span> <em>arXiv Preprint arXiv:2104.04883</em>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. M. Li, K. Huang, and M. Zitnik, <span>“Graph representation learning in biomedicine,”</span> <em>arXiv preprint arXiv:2104.04883</em>, 2021. </div>
 </div>
 <div id="ref-li2022graph" class="csl-entry">
-———. 2022. <span>“Graph Representation Learning in Biomedicine and Healthcare.”</span> <em>Nature Biomedical Engineering</em>, 1–17.
-</div>
-<div id="ref-lo2022graphsage" class="csl-entry">
-Lo, Wai Weng, Siamak Layeghy, Mohanad Sarhan, Marcus Gallagher, and Marius Portmann. 2022. <span>“E-Graphsage: A Graph Neural Network Based Intrusion Detection System for Iot.”</span> In <em>NOMS 2022-2022 IEEE/IFIP Network Operations and Management Symposium</em>, 1–9. IEEE.
-</div>
-<div id="ref-majumdar2018graph" class="csl-entry">
-Majumdar, Angshul. 2018. <span>“Graph Structured Autoencoder.”</span> <em>Neural Networks</em> 106: 271–80.
-</div>
-<div id="ref-monti2017geometric" class="csl-entry">
-Monti, Federico, Michael Bronstein, and Xavier Bresson. 2017. <span>“Geometric Matrix Completion with Recurrent Multi-Graph Neural Networks.”</span> <em>Advances in Neural Information Processing Systems</em> 30.
-</div>
-<div id="ref-mullard2019machine" class="csl-entry">
-Mullard, Asher. 2019. <span>“Machine Learning Brings Cell Imaging Promises into Focus.”</span> <em>Nature Reviews Drug Discovery</em> 18 (9): 653–56.
-</div>
-<div id="ref-pawson2008network" class="csl-entry">
-Pawson, Tony, and Rune Linding. 2008. <span>“Network Medicine.”</span> <em>FEBS Letters</em> 582 (8): 1266–70.
-</div>
-<div id="ref-perozzi2014deepwalk" class="csl-entry">
-Perozzi, Bryan, Rami Al-Rfou, and Steven Skiena. 2014. <span>“Deepwalk: Online Learning of Social Representations.”</span> In <em>Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 701–10.
-</div>
-<div id="ref-piro2012network" class="csl-entry">
-Piro, Rosario M. 2012. <span>“Network Medicine: Linking Disorders.”</span> <em>Human Genetics</em> 131: 1811–20.
-</div>
-<div id="ref-qu2021supervised" class="csl-entry">
-Qu, Hongchun, Lin Li, Zhaoni Li, and Jian Zheng. 2021. <span>“Supervised Discriminant Isomap with Maximum Margin Graph Regularization for Dimensionality Reduction.”</span> <em>Expert Systems with Applications</em> 180: 115055.
-</div>
-<div id="ref-rietdijk2022morphological" class="csl-entry">
-Rietdijk, Jonne, Tanya Aggarwal, Polina Georgieva, Maris Lapins, Jordi Carreras-Puigvert, and Ola Spjuth. 2022. <span>“Morphological Profiling of Environmental Chemicals Enables Efficient and Untargeted Exploration of Combination Effects.”</span> <em>Science of The Total Environment</em> 832: 155058.
-</div>
-<div id="ref-SCHEEDER201843" class="csl-entry">
-Scheeder, Christian, Florian Heigwer, and Michael Boutros. 2018. <span>“Machine Learning and Image-Based Profiling in Drug Discovery.”</span> <em>Current Opinion in Systems Biology</em> 10: 43–52. https://doi.org/<a href="https://doi.org/10.1016/j.coisb.2018.05.004">https://doi.org/10.1016/j.coisb.2018.05.004</a>.
-</div>
-<div id="ref-shi2020graphaf" class="csl-entry">
-Shi, Chence, Minkai Xu, Zhaocheng Zhu, Weinan Zhang, Ming Zhang, and Jian Tang. 2020. <span>“Graphaf: A Flow-Based Autoregressive Model for Molecular Graph Generation.”</span> <em>arXiv Preprint arXiv:2001.09382</em>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M. M. Li, K. Huang, and M. Zitnik, <span>“Graph representation learning in biomedicine and healthcare,”</span> <em>Nature Biomedical Engineering</em>, pp. 1–17, 2022. </div>
 </div>
 <div id="ref-swinney2020recent" class="csl-entry">
-Swinney, David C, and Jonathan A Lee. 2020. <span>“Recent Advances in Phenotypic Drug Discovery.”</span> <em>F1000Research</em> 9.
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">D. C. Swinney and J. A. Lee, <span>“Recent advances in phenotypic drug discovery,”</span> <em>F1000Research</em>, vol. 9, 2020. </div>
 </div>
-<div id="ref-tian2023combining" class="csl-entry">
-Tian, Guangyan, Philip J Harrison, Akshai P Sreenivasan, Jordi Carreras-Puigvert, and Ola Spjuth. 2023. <span>“Combining Molecular and Cell Painting Image Data for Mechanism of Action Prediction.”</span> <em>Artificial Intelligence in the Life Sciences</em> 3: 100060.
+<div id="ref-barabasi2011network" class="csl-entry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">A.-L. Barabási, N. Gulbahce, and J. Loscalzo, <span>“Network medicine: A network-based approach to human disease,”</span> <em>Nature reviews genetics</em>, vol. 12, no. 1, pp. 56–68, 2011. </div>
 </div>
-<div id="ref-velivckovic2017graph" class="csl-entry">
-Veličković, Petar, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Lio, and Yoshua Bengio. 2017. <span>“Graph Attention Networks.”</span> <em>arXiv Preprint arXiv:1710.10903</em>.
-</div>
-<div id="ref-wang2016text" class="csl-entry">
-Wang, Zhigang, Juanzi Li, Zhiyuan Liu, and Jie Tang. 2016. <span>“Text-Enhanced Representation Learning for Knowledge Graph.”</span> In <em>Proceedings of International Joint Conference on Artificial Intelligent (IJCAI)</em>, 4–17.
-</div>
-<div id="ref-xiong2023graph" class="csl-entry">
-Xiong, Xinye, Bingxin Zhou, and Yu Guang Wang. 2023. <span>“Graph Representation Learning for Interactive Biomolecule Systems.”</span> <em>arXiv Preprint arXiv:2304.02656</em>.
+<div id="ref-piro2012network" class="csl-entry">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">R. M. Piro, <span>“Network medicine: Linking disorders,”</span> <em>Human genetics</em>, vol. 131, pp. 1811–1820, 2012. </div>
 </div>
 <div id="ref-yi2022graph" class="csl-entry">
-Yi, Hai-Cheng, Zhu-Hong You, De-Shuang Huang, and Chee Keong Kwoh. 2022. <span>“Graph Representation Learning in Bioinformatics: Trends, Methods and Applications.”</span> <em>Briefings in Bioinformatics</em> 23 (1): bbab340.
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">H.-C. Yi, Z.-H. You, D.-S. Huang, and C. K. Kwoh, <span>“Graph representation learning in bioinformatics: Trends, methods and applications,”</span> <em>Briefings in Bioinformatics</em>, vol. 23, no. 1, p. bbab340, 2022. </div>
+</div>
+<div id="ref-feng2022prediction" class="csl-entry">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Y.-H. Feng and S.-W. Zhang, <span>“Prediction of drug-drug interaction using an attention-based graph neural network on drug molecular graphs,”</span> <em>Molecules</em>, vol. 27, no. 9, p. 3004, 2022. </div>
+</div>
+<div id="ref-pawson2008network" class="csl-entry">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">T. Pawson and R. Linding, <span>“Network medicine,”</span> <em>FEBS letters</em>, vol. 582, no. 8, pp. 1266–1270, 2008. </div>
+</div>
+<div id="ref-caicedo2017data" class="csl-entry">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">J. C. Caicedo <em>et al.</em>, <span>“Data-analysis strategies for image-based cell profiling,”</span> <em>Nature methods</em>, vol. 14, no. 9, pp. 849–863, 2017. </div>
+</div>
+<div id="ref-chen2020graph" class="csl-entry">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">F. Chen, Y.-C. Wang, B. Wang, and C.-C. J. Kuo, <span>“Graph representation learning: A survey,”</span> <em>APSIPA Transactions on Signal and Information Processing</em>, vol. 9, p. e15, 2020. </div>
+</div>
+<div id="ref-perozzi2014deepwalk" class="csl-entry">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">B. Perozzi, R. Al-Rfou, and S. Skiena, <span>“Deepwalk: Online learning of social representations,”</span> in <em>Proceedings of the 20th ACM SIGKDD international conference on knowledge discovery and data mining</em>, 2014, pp. 701–710. </div>
+</div>
+<div id="ref-grover2016node2vec" class="csl-entry">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">A. Grover and J. Leskovec, <span>“node2vec: Scalable feature learning for networks,”</span> in <em>Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining</em>, 2016, pp. 855–864. </div>
+</div>
+<div id="ref-lo2022graphsage" class="csl-entry">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">W. W. Lo, S. Layeghy, M. Sarhan, M. Gallagher, and M. Portmann, <span>“E-graphsage: A graph neural network based intrusion detection system for iot,”</span> in <em>NOMS 2022-2022 IEEE/IFIP network operations and management symposium</em>, 2022, pp. 1–9. </div>
+</div>
+<div id="ref-hamilton2017representation" class="csl-entry">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">W. L. Hamilton, R. Ying, and J. Leskovec, <span>“Representation learning on graphs: Methods and applications,”</span> <em>arXiv preprint arXiv:1709.05584</em>, 2017. </div>
+</div>
+<div id="ref-berg2017graph" class="csl-entry">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">R. van den Berg, T. N. Kipf, and M. Welling, <span>“Graph convolutional matrix completion,”</span> <em>arXiv preprint arXiv:1706.02263</em>, 2017. </div>
+</div>
+<div id="ref-gilmer2017neural" class="csl-entry">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, <span>“Neural message passing for quantum chemistry,”</span> in <em>International conference on machine learning</em>, 2017, pp. 1263–1272. </div>
+</div>
+<div id="ref-defferrard2016convolutional" class="csl-entry">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">M. Defferrard, X. Bresson, and P. Vandergheynst, <span>“Convolutional neural networks on graphs with fast localized spectral filtering,”</span> <em>Advances in neural information processing systems</em>, vol. 29, 2016. </div>
+</div>
+<div id="ref-monti2017geometric" class="csl-entry">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">F. Monti, M. Bronstein, and X. Bresson, <span>“Geometric matrix completion with recurrent multi-graph neural networks,”</span> <em>Advances in neural information processing systems</em>, vol. 30, 2017. </div>
+</div>
+<div id="ref-wang2016text" class="csl-entry">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">Z. Wang, J. Li, Z. Liu, and J. Tang, <span>“Text-enhanced representation learning for knowledge graph,”</span> in <em>Proceedings of international joint conference on artificial intelligent (IJCAI)</em>, 2016, pp. 4–17. </div>
+</div>
+<div id="ref-cao2016deep" class="csl-entry">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">S. Cao, W. Lu, and Q. Xu, <span>“Deep neural networks for learning graph representations,”</span> in <em>Proceedings of the AAAI conference on artificial intelligence</em>, 2016, vol. 30. </div>
+</div>
+<div id="ref-majumdar2018graph" class="csl-entry">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">A. Majumdar, <span>“Graph structured autoencoder,”</span> <em>Neural Networks</em>, vol. 106, pp. 271–280, 2018. </div>
+</div>
+<div id="ref-qu2021supervised" class="csl-entry">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">H. Qu, L. Li, Z. Li, and J. Zheng, <span>“Supervised discriminant isomap with maximum margin graph regularization for dimensionality reduction,”</span> <em>Expert Systems with Applications</em>, vol. 180, p. 115055, 2021. </div>
+</div>
+<div id="ref-shi2020graphaf" class="csl-entry">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">C. Shi, M. Xu, Z. Zhu, W. Zhang, M. Zhang, and J. Tang, <span>“Graphaf: A flow-based autoregressive model for molecular graph generation,”</span> <em>arXiv preprint arXiv:2001.09382</em>, 2020. </div>
+</div>
+<div id="ref-jin2018junction" class="csl-entry">
+<div class="csl-left-margin">[29] </div><div class="csl-right-inline">W. Jin, R. Barzilay, and T. Jaakkola, <span>“Junction tree variational autoencoder for molecular graph generation,”</span> in <em>International conference on machine learning</em>, 2018, pp. 2323–2332. </div>
 </div>
 <div id="ref-you2018graphrnn" class="csl-entry">
-You, Jiaxuan, Rex Ying, Xiang Ren, William Hamilton, and Jure Leskovec. 2018. <span>“Graphrnn: Generating Realistic Graphs with Deep Auto-Regressive Models.”</span> In <em>International Conference on Machine Learning</em>, 5708–17. PMLR.
+<div class="csl-left-margin">[30] </div><div class="csl-right-inline">J. You, R. Ying, X. Ren, W. Hamilton, and J. Leskovec, <span>“Graphrnn: Generating realistic graphs with deep auto-regressive models,”</span> in <em>International conference on machine learning</em>, 2018, pp. 5708–5717. </div>
+</div>
+<div id="ref-rietdijk2022morphological" class="csl-entry">
+<div class="csl-left-margin">[31] </div><div class="csl-right-inline">J. Rietdijk, T. Aggarwal, P. Georgieva, M. Lapins, J. Carreras-Puigvert, and O. Spjuth, <span>“Morphological profiling of environmental chemicals enables efficient and untargeted exploration of combination effects,”</span> <em>Science of The Total Environment</em>, vol. 832, p. 155058, 2022. </div>
+</div>
+<div id="ref-tian2023combining" class="csl-entry">
+<div class="csl-left-margin">[32] </div><div class="csl-right-inline">G. Tian, P. J. Harrison, A. P. Sreenivasan, J. Carreras-Puigvert, and O. Spjuth, <span>“Combining molecular and cell painting image data for mechanism of action prediction,”</span> <em>Artificial Intelligence in the Life Sciences</em>, vol. 3, p. 100060, 2023. </div>
+</div>
+<div id="ref-mullard2019machine" class="csl-entry">
+<div class="csl-left-margin">[33] </div><div class="csl-right-inline">A. Mullard, <span>“Machine learning brings cell imaging promises into focus,”</span> <em>Nature Reviews Drug Discovery</em>, vol. 18, no. 9, pp. 653–656, 2019. </div>
+</div>
+<div id="ref-SCHEEDER201843" class="csl-entry">
+<div class="csl-left-margin">[34] </div><div class="csl-right-inline">C. Scheeder, F. Heigwer, and M. Boutros, <span>“Machine learning and image-based profiling in drug discovery,”</span> <em>Current Opinion in Systems Biology</em>, vol. 10, pp. 43–52, 2018, doi: <a href="https://doi.org/10.1016/j.coisb.2018.05.004">https://doi.org/10.1016/j.coisb.2018.05.004</a>. [Online]. Available: <a href="https://www.sciencedirect.com/science/article/pii/S2452310018300027">https://www.sciencedirect.com/science/article/pii/S2452310018300027</a></div>
 </div>
 </div>
             </section>
