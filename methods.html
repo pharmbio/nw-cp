@@ -23,7 +23,7 @@
 <meta name="author" content="Nima Chamyani" />
 
 
-<meta name="date" content="2023-06-28" />
+<meta name="date" content="2023-07-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -329,27 +329,28 @@ div.csl-indent {
 <span id="cb2-3"><a href="methods.html#cb2-3" tabindex="-1"></a>X <span class="op">=</span> X.loc[:, (X.std() <span class="op">&gt;</span> <span class="fl">0.0001</span>) ]</span></code></pre></div>
 <div id="normalization" class="section level4 hasAnchor" number="2.2.1.1">
 <h4><span class="header-section-number">2.2.1.1</span> Normalization<a href="methods.html#normalization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In the normalization phase, the features were normalized based on DMSO (control), both in a general approach (without plate separation) and separated by plates. In the general approach, the median of all data points was taken at once, and the Z-scores were calculated using the median and median absolute deviations (MADs) for DMSO.</p>
-<p><span class="math display">\[Z = \frac{X - DMSO_{median}}{|X_{dmso} - DMSO_{median}|_{median}}\]</span></p>
-<p>where <span class="math inline">\(X\)</span> is observed feature value, <span class="math inline">\(DMSO_{median}\)</span> is median of DMSO and <span class="math inline">\(X_{dmso}\)</span> is observed feature value of DMSO.</p>
+<p>Two methods of normalization were employed in this study: an overall approach and a plate-separated strategy. Both strategies utilized Median and Median Absolute Deviation (MMAD) normalization. The normalization was accomplished using the formula:</p>
+<p><span class="math display">\[MMAD = \frac{X - DMSO_{median}}{|X_{dmso} - DMSO_{median}|_{median}}\]</span></p>
+<p>where <span class="math inline">\(X\)</span> denotes the observed feature value, <span class="math inline">\(DMSO_{median}\)</span> signifies the median value of DMSO, and <span class="math inline">\(X_{dmso}\)</span> represents the observed feature value of DMSO. The overall strategy applied this formula to the entire dataset at once, whereas the plate-separated strategy applied it independently to each plate, using the local median values of DMSO for normalization within that plate.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="methods.html#cb3-1" tabindex="-1"></a>dfDMSO <span class="op">=</span> df[df[<span class="st">&#39;batch_id&#39;</span>] <span class="op">==</span> <span class="st">&#39;[dmso]&#39;</span>]</span>
 <span id="cb3-2"><a href="methods.html#cb3-2" tabindex="-1"></a>dfDMSO_Medians <span class="op">=</span> dfDMSO[phenotype_features].median()</span>
 <span id="cb3-3"><a href="methods.html#cb3-3" tabindex="-1"></a>dfDMSO_MADs <span class="op">=</span> (dfDMSO[phenotype_features] <span class="op">-</span> dfDMSO[phenotype_features].median()).<span class="bu">abs</span>().median()</span>
-<span id="cb3-4"><a href="methods.html#cb3-4" tabindex="-1"></a>df_Zscores <span class="op">=</span> df[phenotype_features].copy()</span>
-<span id="cb3-5"><a href="methods.html#cb3-5" tabindex="-1"></a>df_Zscores <span class="op">=</span> (df[phenotype_features] <span class="op">-</span> dfDMSO_Medians[phenotype_features])<span class="op">/</span>dfDMSO_MADs[phenotype_features]</span>
-<span id="cb3-6"><a href="methods.html#cb3-6" tabindex="-1"></a>df_Zscores.clip(lower<span class="op">=-</span><span class="dv">10</span>, upper<span class="op">=</span><span class="dv">10</span>,  inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<span id="cb3-4"><a href="methods.html#cb3-4" tabindex="-1"></a>df_MMAD <span class="op">=</span> df[phenotype_features].copy()</span>
+<span id="cb3-5"><a href="methods.html#cb3-5" tabindex="-1"></a>df_MMAD <span class="op">=</span> (df[phenotype_features] <span class="op">-</span> dfDMSO_Medians[phenotype_features])<span class="op">/</span>dfDMSO_MADs[phenotype_features]</span>
+<span id="cb3-6"><a href="methods.html#cb3-6" tabindex="-1"></a>df_MMAD.clip(lower<span class="op">=-</span><span class="dv">10</span>, upper<span class="op">=</span><span class="dv">10</span>,  inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
 <p>In the plate separated approach, the same process was applied. However, it was done first by finding local median values for DMSO in each plate and normalizing the measurements in the same plate based on their respective DMSO medians.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="methods.html#cb4-1" tabindex="-1"></a>df_Zscores_by_plate <span class="op">=</span> pd.DataFrame()</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="methods.html#cb4-1" tabindex="-1"></a>df_MMAD_by_plate <span class="op">=</span> pd.DataFrame()</span>
 <span id="cb4-2"><a href="methods.html#cb4-2" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="methods.html#cb4-3" tabindex="-1"></a><span class="cf">for</span> plate <span class="kw">in</span> plates:</span>
 <span id="cb4-4"><a href="methods.html#cb4-4" tabindex="-1"></a>    plate_data <span class="op">=</span> df[df[<span class="st">&#39;Plate&#39;</span>] <span class="op">==</span> plate]</span>
 <span id="cb4-5"><a href="methods.html#cb4-5" tabindex="-1"></a>    df_DMSO <span class="op">=</span> plate_data[plate_data[<span class="st">&#39;batch_id&#39;</span>] <span class="op">==</span> <span class="st">&#39;[dmso]&#39;</span>]</span>
 <span id="cb4-6"><a href="methods.html#cb4-6" tabindex="-1"></a>    df_DMSO_medians <span class="op">=</span> df_DMSO[phenotype_features].median()</span>
 <span id="cb4-7"><a href="methods.html#cb4-7" tabindex="-1"></a>    df_DMSO_MADs <span class="op">=</span> (df_DMSO[phenotype_features] <span class="op">-</span> df_DMSO[phenotype_features].median()).<span class="bu">abs</span>().median()</span>
-<span id="cb4-8"><a href="methods.html#cb4-8" tabindex="-1"></a>    Zscores <span class="op">=</span> (df[df[<span class="st">&#39;Plate&#39;</span>] <span class="op">==</span> plate][phenotype_features] <span class="op">-</span> df_DMSO_medians[phenotype_features])<span class="op">/</span>df_DMSO_MADs[phenotype_features]</span>
-<span id="cb4-9"><a href="methods.html#cb4-9" tabindex="-1"></a>    df_Zscores_by_plate <span class="op">=</span> pd.concat([df_Zscores_by_plate, Zscores])</span>
+<span id="cb4-8"><a href="methods.html#cb4-8" tabindex="-1"></a>    MMAD <span class="op">=</span> (df[df[<span class="st">&#39;Plate&#39;</span>] <span class="op">==</span> plate][phenotype_features] <span class="op">-</span> df_DMSO_medians[phenotype_features])<span class="op">/</span>df_DMSO_MADs[phenotype_features]</span>
+<span id="cb4-9"><a href="methods.html#cb4-9" tabindex="-1"></a>    df_MMAD_by_plate <span class="op">=</span> pd.concat([df_MMADs_by_plate, MMAD])</span>
 <span id="cb4-10"><a href="methods.html#cb4-10" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="methods.html#cb4-11" tabindex="-1"></a>df_Zscores_by_plate</span></code></pre></div>
+<span id="cb4-11"><a href="methods.html#cb4-11" tabindex="-1"></a>df_MMAD_by_plate</span></code></pre></div>
+<p>The site-level features were normalized at the plate level using the mean and standard deviation of the DMSO sites in the plate. MMAD normalization was chosen due to its robustness to outliers, implying that it functions well even with data containing extreme values. In contrast, other methods, such as Z-score normalization, could be significantly affected by these outliers. Furthermore, MMAD normalization does not require the data to follow a specific distribution, making it a versatile choice for various datasets. The application of two different strategies, one that treated the dataset as a whole and another that treated each plate independently, was done to account for potential variations within and between different plates.</p>
 </div>
 <div id="dimensionality-reduction" class="section level4 hasAnchor" number="2.2.1.2">
 <h4><span class="header-section-number">2.2.1.2</span> Dimensionality Reduction<a href="methods.html#dimensionality-reduction" class="anchor-section" aria-label="Anchor link to header"></a></h4>
