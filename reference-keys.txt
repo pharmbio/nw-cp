@@ -3,7 +3,6 @@ graphs
 graph-representation-learning
 cell-profiling
 methods
-data-acquisition-softwares-and-libraries
 data-preprocessing
 covid-19-cell-profilling-data
 normalization
@@ -22,5 +21,11 @@ bio-graph-integrative-classifierregressor-biogicbiogir
 classificationregression
 predicting-joint-effect-of-nodes-chemical-combination
 optimized-molecular-graph-generator-omg
-model-enhancement-ensembling-and-self-supervised-learning
+model-validation-and-optimization
+model-enhancement
+data-acquisition-software-and-libraries
 results
+regressionclassification-performance
+covid-19-biograph-topology
+combination-prediction
+molecule-generation
