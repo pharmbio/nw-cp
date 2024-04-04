@@ -1,4 +1,3 @@
-# nw-cp
-A master thesis on network analysis approach using morphological profiling of chemical perturbation
+# GNN and Cell Painting
 
 visit https://pharmbio.github.io/nw-cp
